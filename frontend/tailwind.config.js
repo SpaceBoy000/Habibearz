@@ -30,7 +30,10 @@ module.exports = {
 
       '2xl': {'min': '1536px'},
       // => @media (min-width: 1536px) { ... }
-    }
+    },
+    fontFamily: {
+      dm: ["DM Sans", "sans-serif"],
+    },
   },
   plugins: [],
 }
