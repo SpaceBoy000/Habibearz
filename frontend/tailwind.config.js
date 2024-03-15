@@ -10,6 +10,7 @@ module.exports = {
     extend: {
       colors: {
         'regal-white': "#F5F5F5",
+        'hb-yellow': "#F6CE0E",
       }
     },
     screens: {
