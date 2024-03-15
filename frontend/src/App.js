@@ -3,6 +3,7 @@ import Home from "./Home";
 import CreatePresale from "./pages/CreatePresale";
 import Navbar from "./layout/Navbar";
 import Header from "./layout/Header";
+import Footer from "./layout/Footer";
 import { useGlobalContext } from "./providers/GlobalProvider";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -23,6 +24,7 @@ function App() {
                             <Route path="/presale/create" element={<CreatePresale />} />
                         </Routes>
                     </div>
+                    <Footer/>
                     <ToastContainer
                         position="top-right"
                         autoClose={4000}

@@ -7,7 +7,7 @@ import { FaUnlock } from "react-icons/fa";
 import { useGlobalContext } from "../providers/GlobalProvider";
 import config from "../config";
 
-import divideImg from "../assets/images/divider.svg";
+
 
 import homeIcon from "../assets/icons/house_solid.svg";
 import lockIcon from "../assets/icons/lock.svg";
@@ -159,7 +159,7 @@ export default function Navbar() {
                             Shiva Labs
                         </div>
                         <RiMenuFoldLine className="absolute top-0 hidden w-6 h-6 text-white xs:flex dark:text-black -right-6" onClick={() => {showNavFunc(false)}}/>
-                        <img src={divideImg} className="-mt-4"/>
+                        
                         <div className="control-panel">
                             <span className="title-2 text-white dark:text-black !font-normal pb-2">Product</span>
                             {

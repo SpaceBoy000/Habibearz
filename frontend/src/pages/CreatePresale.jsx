@@ -16,10 +16,6 @@ import { useGlobalContext } from "../providers/GlobalProvider";
 import * as Constants from "../constants";
 import config from "../config";
 
-
-import divideImg from "../assets/images/divider.svg";
-import divideImg_dark from "../assets/images/divider_dark.svg";
-
 import ellipseIcon from "../assets/icons/ellipse.svg";
 import darkEllipseIcon from "../assets/icons/ellipse_dark.svg";
 import closedEllipseIcon from "../assets/icons/ellipse_closed.svg";
@@ -61,7 +57,7 @@ function PresaleInfo({
         <div className='create-panel !max-w-[320px] h-fit dark:bg-gradient-to-r from-white to to-white bg-[linear-gradient(127deg,_rgba(6,_11,_40,_0.74)_28.26%,rgba(10,_14,_35,_0.71)_91.2%)]'>
             <div>
                 <p className="sub-title dark:text-black">Presale Information</p>
-                <img src={darkMode ? divideImg_dark : divideImg} className="pt-6 xs:pt-2" />
+                
             </div>
             <div className="flex flex-col w-full gap-4">
                 {
@@ -171,7 +167,7 @@ function CreatePresale1({
         <div className='create-panel dark:bg-gradient-to-r from-white to to-white bg-[linear-gradient(127deg,_rgba(6,_11,_40,_0.74)_28.26%,rgba(10,_14,_35,_0.71)_91.2%)]'>
             <div>
                 <p className="main-title dark:text-black">Presale Creator</p>
-                <img src={darkMode ? divideImg_dark : divideImg} className="pt-6 xs:pt-2" />
+                
             </div>
             <div className="w-full">
                 <div className="flex flex-row justify-between w-full">
@@ -210,7 +206,7 @@ function CreatePresale1({
                     </Tabs>
                     <p className="source-1 text-[#6B6B6F] dark:text-[#6B6B6F] text-left pt-1">Your Presale is available for purchase using {activeTab == 0 ? 'SOL' : activeTab == 1 ? 'USDT' : 'USDC'}</p>
                 </div>
-                <img src={darkMode ? divideImg_dark : divideImg} className="py-6 xs:py-2" />
+                
                 <div className="flex flex-row items-center justify-between">
                     <p className="pl-4 text-left text-white title-2 dark:text-black">Enable Affiliate Program</p>
                     <SwitchOS
@@ -283,7 +279,7 @@ function CreatePresale2({
         <div className='create-panel dark:bg-gradient-to-r from-white to to-white bg-[linear-gradient(127deg,_rgba(6,_11,_40,_0.74)_28.26%,rgba(10,_14,_35,_0.71)_91.2%)]'>
             <div>
                 <p className="main-title dark:text-black">Presale Creator2</p>
-                <img src={darkMode ? divideImg_dark : divideImg} className="pt-6 xs:pt-2" />
+                
             </div>
             <div className="w-full">
                 <div className="flex flex-row justify-between w-full">
