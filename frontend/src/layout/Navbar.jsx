@@ -26,8 +26,8 @@ import helpIcon from "../assets/icons/help.svg";
 
 import lightIcon from "../assets/icons/light.svg";
 import lightActiveIcon from "../assets/icons/light-active.svg";
-import darkIcon from "../assets/icons/dark.svg";
-import darkActiveIcon from "../assets/icons/dark-active.svg";
+import darkIcon from "../assets/icons/moon.svg";
+import darkActiveIcon from "../assets/icons/sun.svg";
 
 
 const features = [
@@ -151,14 +151,14 @@ export default function Navbar() {
     }
 
     return (
-        <div className="xs:w-full xs:min-h-screen xs:z-20 flex">
+        <div className="flex xs:w-full xs:min-h-screen xs:z-20">
             <div className={`relative xs:absolute min-h-full xs:z-20 border-r border-[#ffffff1a] dark:border-black nav-bar bg-[linear-gradient(127deg,_rgba(6,_11,_40,_0.74)_28.26%,_rgba(10,_14,_35,_0.71)_91.2%)] dark:bg-gradient-to-t from-white to to-white`}>
                 <div className="nav-bar-panel">
-                    <div className="nav-bar-panel2 relative">
+                    <div className="relative nav-bar-panel2">
                         <div className="main-logo bg-[linear-gradient(98deg,_#FFF_70.67%,_rgba(117,_122,_140,_0.00)_108.55%)] dark:bg-[linear-gradient(91deg,_#000_54.04%,_rgba(255,_255,_255,_0.00)_91.87%)]">
                             Shiva Labs
                         </div>
-                        <RiMenuFoldLine className="hidden xs:flex absolute text-white dark:text-black w-6 h-6 -right-6 top-0" onClick={() => {showNavFunc(false)}}/>
+                        <RiMenuFoldLine className="absolute top-0 hidden w-6 h-6 text-white xs:flex dark:text-black -right-6" onClick={() => {showNavFunc(false)}}/>
                         <img src={divideImg} className="-mt-4"/>
                         <div className="control-panel">
                             <span className="title-2 text-white dark:text-black !font-normal pb-2">Product</span>
@@ -166,15 +166,15 @@ export default function Navbar() {
                                 features.map((item, index) => {
                                     return (
                                         <>
-                                            <div className="control-item cursor-pointer" key={index} onClick={() => { handleClickItem(index) }}>
+                                            <div className="cursor-pointer control-item" key={index} onClick={() => { handleClickItem(index) }}>
                                                 <div className="item-field">
                                                     <img src={item.icon} width="24px" height="24px" />
-                                                    <span className="title-2 text-white dark:text-black pl-1">{item.title}</span>
+                                                    <span className="pl-1 text-white title-2 dark:text-black">{item.title}</span>
                                                 </div>
                                                 {/* <img src={isOpen == index ? upIcon : downIcon} width="24px" height="24px" /> */}
                                                 {
                                                     item.properties?.length > 0 ? 
-                                                    (isOpen == index ? <FaAngleUp className="text-white dark:text-black w-4 h-4"/> : <FaAngleDown className="text-white dark:text-black w-4 h-4"/>)
+                                                    (isOpen == index ? <FaAngleUp className="w-4 h-4 text-white dark:text-black"/> : <FaAngleDown className="w-4 h-4 text-white dark:text-black"/>)
                                                     : 
                                                     <></>}
                                             </div>
@@ -207,7 +207,7 @@ export default function Navbar() {
                                         <a className="control-item" key={index} href={item.url} target="__blank">
                                             <div className="item-field">
                                                 <img src={item.icon} width="24px" height="24px" />
-                                                <span className="title-2 text-white dark:text-black pl-1">{item.title}</span>
+                                                <span className="pl-1 text-white title-2 dark:text-black">{item.title}</span>
                                             </div>
                                         </a>
                                     )
@@ -215,13 +215,13 @@ export default function Navbar() {
                             }
                         </div>
                         <div className="help-panel">
-                            <div className="w-8 h-8 bg-white border rounded-xl flex justify-center">
+                            <div className="flex justify-center w-8 h-8 bg-white border rounded-xl">
                                 <img src={helpIcon} width="24px" height="24px" />
                             </div>
-                            <span className="title-2 text-white">Need help?</span>
-                            <span className="source-1 text-white">Please check our docs</span>
+                            <span className="text-white title-2">Need help?</span>
+                            <span className="text-white source-1">Please check our docs</span>
                             <a href="/doc.pdf" className="btn-doc">
-                                <p className="btn-text text-white dark:text-black">DOCUMENTATION</p>
+                                <p className="text-white btn-text dark:text-black">DOCUMENTATION</p>
                             </a>
 
                         </div>

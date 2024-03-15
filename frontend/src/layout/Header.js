@@ -4,21 +4,20 @@ import { RiMenuLine } from "react-icons/ri";
 
 import { useGlobalContext } from '../providers/GlobalProvider';
 
-import lightIcon from "../assets/icons/light.svg";
-import lightActiveIcon from "../assets/icons/light-active.svg";
-import darkIcon from "../assets/icons/dark.svg";
-import darkActiveIcon from "../assets/icons/dark-active.svg";
+import moonIcon from "../assets/icons/moon.svg";
+import sunIcon from "../assets/icons/sun.svg";
+import mainLogo from "../assets/icons/main-logo.png";
 
 export default function Header() {
 
     const { darkMode, toggleColorMode, showNav, showNavFunc } = useGlobalContext();
-    
+    console.log("darkMode: ", darkMode);
     const [colorMode, setColorMode] = useState(false); // false: dark mode, true: light mode
 
     const switchColorTheme = (_dark) => {
         toggleColorMode(_dark);
-        setColorMode(_dark);
-        console.log("switchColorTheme: ", _dark);
+        // setColorMode(_dark);
+        // console.log("switchColorTheme: ", _dark);
 
         if (_dark) {
             document.documentElement.classList.add('dark');
@@ -28,15 +27,25 @@ export default function Header() {
     }
 
     return (
-        <div className='header dark:bg-[#171717] bg-[#FCFCFC] flex justify-end xs:justify-between  items-center'>
+        <div className='dark:bg-[#171717] bg-[#FCFCFC] flex justify-between xs:justify-between items-center px-8 py-4'>
             <RiMenuLine className={`hidden xs:flex text-white dark:text-black w-6 h-6`} onClick={() => { showNavFunc(true) }} />
-            <div className="color-mode">
-                <div className="color-mode-panel bg-[#01276A] dark:bg-white cursor-pointer">
-                    <img src={colorMode ? lightActiveIcon : lightIcon} width="24px" height="24px" className={`p-1 rounded-full ${colorMode ? "bg-black dark:bg-[#4628FF]" : ""}`} onClick={() => { switchColorTheme(true) }} />
-                    <img src={colorMode ? darkIcon : darkActiveIcon} width="24px" height="24px" className={`p-1 rounded-full ${!colorMode ? "bg-black" : ""}`} onClick={() => { switchColorTheme(false) }} />
+            <div className="flex flex-row items-center gap-2">
+                <img src={mainLogo} width="48px" className="rounded-full"/>
+                <p className="font-dm text-[30px] font-bold text-black dark:text-white">Habibearz</p>
+            </div>
+            <div className="flex flex-row gap-8">
+                <div className="font-dm text-[14px] font-bold text-black dark:text-white">Home</div>
+                <div className="font-dm text-[14px] font-bold text-black dark:text-white">DeFi</div>
+                <div className="font-dm text-[14px] font-bold text-black dark:text-white">Data</div>
+            </div>
+            <div className="flex flex-row gap-12">
+                <div className={`flex justify-center w-12 h-12 rounded-full items-center ${darkMode ? "bg-[#232323] border border-[#EDECEC]" : "bg-white"}`}>
+                    <img src={darkMode ? sunIcon : moonIcon} width="24px" height="24px" onClick={() => { switchColorTheme(!darkMode) }} />
+                </div>
+                <div className="bg-[#F6CE0E] dark:bg-transparent dark:border dark:border-[#F6CE0E] h-12 px-[20px] flex items-center rounded">
+                    <p className="font-[Poppins] text-[14px ] font-black text-black dark:text-[#F6CE0E]">BUY HBEARZ</p>
                 </div>
             </div>
-            <p>Connect Wallet</p>
         </div>
     )
 }
