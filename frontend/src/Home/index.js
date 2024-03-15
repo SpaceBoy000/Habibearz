@@ -212,8 +212,8 @@ export default function Home() {
                         <p className="text-[#F6CE0E] uppercase text-[16px] font-bold">welcome to HabibearZ</p>
                         <div className="bg-[#F6CE0E] w-7 h-[2px]" />
                     </div>
-                    <p className="text-[56px] font-bold leading-[64px]">Meet HBEARZ, Not All bears are bad! Some Have Hearts.</p>
-                    <p className="text-[16px] font-normal">
+                    <p className="text-[56px] font-bold leading-[64px] text-black dark:text-white">Meet HBEARZ, Not All bears are bad! Some Have Hearts.</p>
+                    <p className="text-[16px] font-normal text-black dark:text-white">
                         A Hyper Deflationary DeFi Meme coin which gives you access to the Habibears Metaverse.
                         <br />
                         <br />
@@ -229,7 +229,7 @@ export default function Home() {
             </div>
             <div id="social" className="flex flex-row text-left">
                 <div className="flex">
-                    <p className="text-[24px] font-bold">Join our<br />community</p>
+                    <p className="text-[24px] font-bold text-black dark:text-white">Join our<br />community</p>
                     <img src={characImg} width="132px" height="104px !important" />
                 </div>
                 <div className="flex flex-row gap-4">
@@ -238,7 +238,7 @@ export default function Home() {
                             return (
                                 <div className="flex flex-col items-center justify-center w-[132px] h-[132px] p-4 border border-[#494949] rounded-lg" key={index}>
                                     <img src={item.icon} width="60px" />
-                                    <p className="text-[16px] font-bold">{item.title}</p>
+                                    <p className="text-[16px] font-bold text-black dark:text-white">{item.title}</p>
                                 </div>
                             );
                         })
@@ -251,18 +251,16 @@ export default function Home() {
                     <div className="bg-[#F6CE0E] w-7 h-1" />
                 </div>
                 <div className="text-left w-1/2 flex flex-col gap-4">
-                    <p className="text-[36px] font-bold">Receive sustainable rewards inside our DeFi platform as we build the Habibi Metaverse</p>
-                    <p className="text-[18px] font-normal">
-                        In a evolution of DeFi and Metaverse platforms HBEARZ has the opportunity to participate in not only token rewards, but the rewards of the metaverses revenue
-                    </p>
+                    <p className="text-[36px] font-bold text-black dark:text-white">Receive sustainable rewards inside our DeFi platform as we build the Habibi Metaverse</p>
+                    <p className="text-[18px] font-normal text-black dark:text-white">In a evolution of DeFi and Metaverse platforms HBEARZ has the opportunity to participate in not only token rewards, but the rewards of the metaverses revenue</p>
                 </div>
                 <div className="flex gap-8 pt-16">
                     <div className="w-full flex flex-row gap-4">
                         <div className="bg-[#FED201] text-[36px] font-bold rounded-full !w-16 !h-16 px-6 flex items-center">1</div>
                         <div className="text-left flex flex-col gap-1">
-                            <p className="text-[24px] font-bold text-[#969696]">Enter the Habibiverz Ecosystem</p>
-                            <p className="text-[30px] font-bold">Buy HBEARZ Token</p>
-                            <p className="text-[18px] font-normal">Purchase the HBEARZ token from a launchpad sale or from a DEX. The CRYPTO coin can only be acquired through staking HBEARZ</p>
+                            <p className="text-[24px] font-bold text-[#969696] dark:text-[#FED201]">Enter the Habibiverz Ecosystem</p>
+                            <p className="text-[30px] font-bold text-black dark:text-white">Buy HBEARZ Token</p>
+                            <p className="text-[18px] font-normal text-black dark:text-white">Purchase the HBEARZ token from a launchpad sale or from a DEX. The CRYPTO coin can only be acquired through staking HBEARZ</p>
                         </div>
                     </div>
                     <div className="w-full">
@@ -273,9 +271,9 @@ export default function Home() {
                     <div className="w-full flex flex-row gap-4">
                         <div className="bg-[#FED201] text-[36px] font-bold rounded-full !w-16 !h-16 px-6 flex items-center">2</div>
                         <div className="text-left flex flex-col gap-1">
-                            <p className="text-[24px] font-bold text-[#969696]">Recieve Tokens Rewards</p>
-                            <p className="text-[30px] font-bold">Stake the HBEARZ Token</p>
-                            <p className="text-[18px] font-normal">Stake the HBEARZ token and recieve HBEARZ and the Habibiverz (CRYPTO) Token as a reward</p>
+                            <p className="text-[24px] font-bold text-[#969696] dark:text-[#FED201]">Recieve Tokens Rewards</p>
+                            <p className="text-[30px] font-bold text-black dark:text-white">Stake the HBEARZ Token</p>
+                            <p className="text-[18px] font-normal text-black dark:text-white">Stake the HBEARZ token and recieve HBEARZ and the Habibiverz (CRYPTO) Token as a reward</p>
                         </div>
                     </div>
                     <div className="w-full">
@@ -286,9 +284,9 @@ export default function Home() {
                     <div className="w-full flex flex-row gap-4">
                         <div className="bg-[#FED201] text-[36px] font-bold rounded-full !w-16 !h-16 px-6 flex items-center">3</div>
                         <div className="text-left flex flex-col gap-1">
-                            <p className="text-[24px] font-bold text-[#969696]">Earn Revenue</p>
-                            <p className="text-[30px] font-bold">HODL for 25% of HABIBIVERZ Profits</p>
-                            <p className="text-[18px] font-normal">Each quarter profits from the Habibiverz Metaverse, including HBEARZCoin, Habibiverz NFTs and Elders of the Realms will be deposited into  CRYPTO holders wallets</p>
+                            <p className="text-[24px] font-bold text-[#969696] dark:text-[#FED201]">Earn Revenue</p>
+                            <p className="text-[30px] font-bold text-black dark:text-white">HODL for 25% of HABIBIVERZ Profits</p>
+                            <p className="text-[18px] font-normal text-black dark:text-white">Each quarter profits from the Habibiverz Metaverse, including HBEARZCoin, Habibiverz NFTs and Elders of the Realms will be deposited into  CRYPTO holders wallets</p>
                         </div>
                     </div>
                     <div className="w-full">
@@ -299,9 +297,9 @@ export default function Home() {
                     <div className="w-full flex flex-row gap-4">
                         <div className="bg-[#FED201] text-[36px] font-bold rounded-full !w-16 !h-16 px-6 flex items-center">4</div>
                         <div className="text-left flex flex-col gap-1">
-                            <p className="text-[24px] font-bold text-[#969696]">Compound Interest</p>
-                            <p className="text-[30px] font-bold">Exchange LP Tokens for More Tokens</p>
-                            <p className="text-[18px] font-normal">Swap your HBEARZ and CRYPTO LP tokens for discounted tokens, then compound your staking or bonds to recieve more </p>
+                            <p className="text-[24px] font-bold text-[#969696] dark:text-[#FED201]">Compound Interest</p>
+                            <p className="text-[30px] font-bold text-black dark:text-white">Exchange LP Tokens for More Tokens</p>
+                            <p className="text-[18px] font-normal text-black dark:text-white">Swap your HBEARZ and CRYPTO LP tokens for discounted tokens, then compound your staking or bonds to recieve more </p>
                         </div>
                     </div>
                     <div className="w-full">
@@ -312,9 +310,9 @@ export default function Home() {
                     <div className="w-full flex flex-row gap-4">
                         <div className="bg-[#FED201] text-[36px] font-bold rounded-full !w-16 !h-16 px-6 flex items-center">5</div>
                         <div className="text-left flex flex-col gap-1">
-                            <p className="text-[24px] font-bold text-[#969696]">Treasury Growth</p>
-                            <p className="text-[30px] font-bold">Increased HBEARZ & CRYPTO Value</p>
-                            <p className="text-[18px] font-normal">The inflow of LP tokens are used to back HBEARZ and CRYPTO tokens, stabilise the price of the tokens and regulate the APY. </p>
+                            <p className="text-[24px] font-bold text-[#969696] dark:text-[#FED201]">Treasury Growth</p>
+                            <p className="text-[30px] font-bold text-black dark:text-white">Increased HBEARZ & CRYPTO Value</p>
+                            <p className="text-[18px] font-normal text-black dark:text-white">The inflow of LP tokens are used to back HBEARZ and CRYPTO tokens, stabilise the price of the tokens and regulate the APY. </p>
                         </div>
                     </div>
                     <div className="w-full">
@@ -325,9 +323,9 @@ export default function Home() {
                     <div className="w-full flex flex-row gap-4">
                         <div className="bg-[#FED201] text-[36px] font-bold rounded-full !w-16 !h-16 px-6 flex items-center">6</div>
                         <div className="text-left flex flex-col gap-1">
-                            <p className="text-[24px] font-bold text-[#969696]">Farm for ETH</p>
-                            <p className="text-[30px] font-bold">Farm the HBEARZ & CRYPTO Pair</p>
-                            <p className="text-[18px] font-normal">Deposit the HBEARZ and Habibiverz Tokens on the Paradis DEX to recieve upto a 5% monthly reward in Etheruem (ETH)</p>
+                            <p className="text-[24px] font-bold text-[#969696] dark:text-[#FED201]">Farm for ETH</p>
+                            <p className="text-[30px] font-bold text-black dark:text-white">Farm the HBEARZ & CRYPTO Pair</p>
+                            <p className="text-[18px] font-normal text-black dark:text-white">Deposit the HBEARZ and Habibiverz Tokens on the Paradis DEX to recieve upto a 5% monthly reward in Etheruem (ETH)</p>
                         </div>
                     </div>
                     <div className="w-full">
@@ -338,9 +336,9 @@ export default function Home() {
                     <div className="w-full flex flex-row gap-4">
                         <div className="bg-[#FED201] text-[36px] font-bold rounded-full !w-16 !h-16 px-6 flex items-center">7</div>
                         <div className="text-left flex flex-col gap-1">
-                            <p className="text-[24px] font-bold text-[#969696]">HODL and Profit from the Ecosystem</p>
-                            <p className="text-[30px] font-bold">Stable Token, Revenue and Rewards</p>
-                            <p className="text-[18px] font-normal">LP fees, two treasury backed tokens and the Habibiverz Metaverse provides the foundation for stable value, long term vision and a communal reward system</p>
+                            <p className="text-[24px] font-bold text-[#969696] dark:text-[#FED201]">HODL and Profit from the Ecosystem</p>
+                            <p className="text-[30px] font-bold text-black dark:text-white">Stable Token, Revenue and Rewards</p>
+                            <p className="text-[18px] font-normal text-black dark:text-white">LP fees, two treasury backed tokens and the Habibiverz Metaverse provides the foundation for stable value, long term vision and a communal reward system</p>
                         </div>
                     </div>
                     <div className="w-full">
@@ -411,15 +409,15 @@ export default function Home() {
                 <div className="flex justify-between gap-8">
                     <div className="relative w-[380px]">
                         <img src={city1Img} />
-                        <p className="absolute bottom-[-20px] left-[calc(50%-100px)] text-[20px] font-bold py-2 px-8 bg-white rounded-xl text-black">Buy the NFTs</p>
+                        <p className="absolute bottom-[-20px] left-[calc(50%-100px)] text-[20px] font-bold py-2 px-8 bg-white dark:bg-[#303030] rounded-xl text-black dark:text-white">Buy the NFTs</p>
                     </div>
                     <div className="relative w-[380px]">
                         <img src={city2Img} />
-                        <p className="absolute bottom-[-20px] left-[calc(50%-100px)] text-[20px] font-bold py-2 px-8 bg-white rounded-xl text-black">Buy the NFTs</p>
+                        <p className="absolute bottom-[-20px] left-[calc(50%-100px)] text-[20px] font-bold py-2 px-8 bg-white dark:bg-[#303030] rounded-xl text-black dark:text-white">Buy the NFTs</p>
                     </div>
                     <div className="relative w-[380px]">
                         <img src={city3Img} />
-                        <p className="absolute bottom-[-20px] left-[calc(50%-100px)] text-[20px] font-bold py-2 px-8 bg-white rounded-xl text-black">Buy the NFTs</p>
+                        <p className="absolute bottom-[-20px] left-[calc(50%-100px)] text-[20px] font-bold py-2 px-8 bg-white dark:bg-[#303030] rounded-xl text-black dark:text-white">Buy the NFTs</p>
                     </div>
                 </div>
 
@@ -436,8 +434,8 @@ export default function Home() {
                             <p className="text-[#F6CE0E] uppercase text-[16px] font-bold">Game</p>
                             <div className="bg-[#F6CE0E] w-7 h-[2px]" />
                         </div>
-                        <p className="text-[36px] font-bold leading-[64px]">Play our game like Vortex</p>
-                        <p className="text-[18px] font-normal">
+                        <p className="text-[36px] font-bold text-black dark:text-white leading-[64px]">Play our game like Vortex</p>
+                        <p className="text-[18px] font-normal text-black dark:text-white">
                             Take a Journey with HBEARZ and other characters from the Habibiverz Metaverse as they travel through dangerous terrain into safer worlds
                             <br /><br />
                             With 50,000 HBEARZ coins up for grab each day. Play the game and earn points which can be converted into real crypto, directly to your wallet.
@@ -445,7 +443,7 @@ export default function Home() {
                             Beat the Vortex and win crypto! On both iOS and Android platforms
                         </p>
                         <div className="flex items-center gap-8 pt-16">
-                            <p className="text-[18px] font-bold">Available on:</p>
+                            <p className="text-[18px] font-bold text-black dark:text-white">Available on:</p>
                             <img src={googlePlayImg} />
                             <img src={appStoreImg} />
                         </div>
@@ -521,30 +519,30 @@ export default function Home() {
                         </div>
                         {
                             activeTab == 1 &&
-                            <div className="flex bg-white p-8 items-start gap-2 rounded-lg">
+                            <div className="flex p-8 items-start gap-2 rounded-lg">
                                 <img src={ noMarkIcon } width="50px" height="50px" className="!w-12 !h-12"/>
                                 
                                 <div className="text-left">
-                                    <p className="text-[18px] font-bold">Create a MetaMask Wallet</p>
-                                    <p className="text-[14px] font-normal">EdenSwap token is available on the Ethereum blockchain. MetaMask is a third party ERC20 (Ethereum) browser wallet, and the very best at that! On Google Chrome, visit metamask.io to download the extension and set up a wallet. On mobile? Get MetaMask's app for iPhone or Android.</p>
+                                    <p className="text-[18px] font-bold text-black dark:text-white">Create a MetaMask Wallet</p>
+                                    <p className="text-[14px] font-normal text-black dark:text-white">EdenSwap token is available on the Ethereum blockchain. MetaMask is a third party ERC20 (Ethereum) browser wallet, and the very best at that! On Google Chrome, visit metamask.io to download the extension and set up a wallet. On mobile? Get MetaMask's app for iPhone or Android.</p>
                                 </div>
                             </div>
                         }
                         {
                             activeTab == 2 &&
-                            <div className="flex bg-white p-8 items-start gap-2 rounded-lg h-16">
+                            <div className="flex p-8 items-start gap-2 rounded-lg h-16">
                                 
                             </div>
                         }
                         {
                             activeTab == 3 &&
-                            <div className="flex bg-white p-8 items-start gap-2 rounded-lg h-16">
+                            <div className="flex p-8 items-start gap-2 rounded-lg h-16">
                                 
                             </div>
                         }
                         {
                             activeTab == 4 &&
-                            <div className="flex bg-white p-8 items-start gap-2 rounded-lg h-16">
+                            <div className="flex p-8 items-start gap-2 rounded-lg h-16">
                                 
                             </div>
                         }
@@ -562,17 +560,17 @@ export default function Home() {
                     </div>
                     <div className="flex pt-8">
                         <div className="w-3/5">
-                            <div className="bg-[#FCFCFC] flex gap-8 justify-end">
-                                <p className="text-[22px] font-bold bg-[#FFFBE7] py-4 px-8">ETH Total Supply<br /> 1,000,000,000,000</p>
-                                <p className="text-[22px] font-bold bg-[#FFFBE7] py-4 px-8">Burn Allocation<br /> 250,000,000,000</p>
+                            <div className="flex gap-8 justify-end">
+                                <p className="text-[22px] font-bold bg-[#FFFBE7] rounded-lg py-4 px-8">ETH Total Supply<br /> 1,000,000,000,000</p>
+                                <p className="text-[22px] font-bold bg-[#FFFBE7] rounded-lg py-4 px-8">Burn Allocation<br /> 250,000,000,000</p>
                             </div>
                             <div className="flex w-[650px] flex-wrap">
                                 {
                                     tokenomics.map((item, index) => {
                                         return (
                                             <div className="flex p-8 gap-4 w-[300px]">
-                                                <p className="text-[16px] font-bold">{item.amount}</p>
-                                                <p className="text-[16px] font-bold">{item.title}</p>
+                                                <p className="text-[16px] font-bold text-black dark:text-white">{item.amount}</p>
+                                                <p className="text-[16px] font-bold text-black dark:text-white">{item.title}</p>
                                             </div>
                                         );
                                     })
@@ -590,8 +588,8 @@ export default function Home() {
                             <p className="text-[#F6CE0E] uppercase text-[16px] font-bold">SOCIAL MEDIA REACH</p>
                             <div className="bg-[#F6CE0E] w-7 h-[2px]" />
                         </div>
-                        <p className="text-[36px] font-bold py-8">Our 6 Month Goal</p>
-                        <p className="text-[18px] font-normal">
+                        <p className="text-[36px] font-bold text-black dark:text-white py-8">Our 6 Month Goal</p>
+                        <p className="text-[18px] font-normal text-black dark:text-white">
                             We want HBEARZ to be a viral movement that adds value to people.
                             <br /><br />
                             Whether you want to follow HBEARZ's adventure throughout Habibiverz, want to help shape the story or just make money from our Ecosystem - it's up to you!
@@ -626,7 +624,7 @@ export default function Home() {
                                 <div className="w-full">
                                     <div>
                                         <img src={item.icon} width="48px" height="48px" />
-                                        <p className="text-left text-white dark:text-black text-[20px] font-bold py-4">{item.title}</p>
+                                        <p className="text-left text-white text-[20px] font-bold py-4">{item.title}</p>
                                     </div>
                                     <div className="flex flex-col gap-2">
                                         {
@@ -653,8 +651,8 @@ export default function Home() {
                         <p className="text-[#F6CE0E] uppercase text-[16px] font-bold">Donatioin</p>
                         <div className="bg-[#F6CE0E] w-7 h-[2px]" />
                     </div>
-                    <p className="text-[36px] font-bold leading-[64px]">Feel like donating?</p>
-                    <p className="text-[18px] font-normal">
+                    <p className="text-[36px] font-bold text-black dark:text-white leading-[64px]">Feel like donating?</p>
+                    <p className="text-[18px] font-normal text-black dark:text-white">
                         As a community token HBEARZ depends on its generous members to support its heroic adventures of bringing hope and help to the hopeless and helpless.
                         <br /><br />
                         Feel free to donate to the official ERC 20 donation wallet
@@ -678,9 +676,9 @@ export default function Home() {
                     <div className="bg-[#F6CE0E] w-7 h-[2px]" />
                 </div>
                 <div className="flex flex-col items-center text-center justify-center">
-                    <p className="text-[36px] font-bold text-white dark:text-black">Join Our Community</p>
-                    <p className="text-[20px] font-bold text-white dark:text-black pb-4">100,000+ Twitter Followers ● 100,000+ Telegram Members</p>
-                    <p className="text-[18px] font-normal text-white dark:text-black max-w-[1052px]">Extremely active community that loves our mission. Our telegram channel is filled with community members 24/7 that would love to help you. Do not trust random messages of people claiming to be “support” or ever give out your wallet info to anyone.</p>
+                    <p className="text-[36px] font-bold text-white ">Join Our Community</p>
+                    <p className="text-[20px] font-bold text-white  pb-4">100,000+ Twitter Followers ● 100,000+ Telegram Members</p>
+                    <p className="text-[18px] font-normal text-white  max-w-[1052px]">Extremely active community that loves our mission. Our telegram channel is filled with community members 24/7 that would love to help you. Do not trust random messages of people claiming to be “support” or ever give out your wallet info to anyone.</p>
                 </div>
                 <div className="flex flex-row flex-wrap justify-center gap-8 pt-8">
                     {
