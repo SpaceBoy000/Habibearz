@@ -7,93 +7,10 @@ import { FaUnlock } from "react-icons/fa";
 import { useGlobalContext } from "../providers/GlobalProvider";
 import config from "../config";
 
+import telIcon from "../assets/icons/socials/telegram.png";
+import xIcon from "../assets/icons/socials/twitter.png";
+import discordIcon from "../assets/icons/socials/discord.png";
 
-
-import homeIcon from "../assets/icons/house_solid.svg";
-import lockIcon from "../assets/icons/lock.svg";
-import databaseIcon from "../assets/icons/database_solid.svg";
-import digitalOceanIcon from "../assets/icons/digitalocean.svg";
-import giftIcon from "../assets/icons/gift_solid.svg";
-import rocketIcon from "../assets/icons/rocket-lunch.svg";
-import downIcon from "../assets/icons/small-caret-down.svg";
-import upIcon from "../assets/icons/small-caret-up.svg";
-
-import xIcon from "../assets/icons/X.svg";
-import telegramIcon from "../assets/icons/telegram-old.svg";
-import discordIcon from "../assets/icons/discord.svg";
-
-import helpIcon from "../assets/icons/help.svg";
-
-import lightIcon from "../assets/icons/light.svg";
-import lightActiveIcon from "../assets/icons/light-active.svg";
-import darkIcon from "../assets/icons/moon.svg";
-import darkActiveIcon from "../assets/icons/sun.svg";
-
-
-const features = [
-    {
-        title: 'Home',
-        icon: homeIcon
-    },
-    {
-        title: 'Launchpad',
-        icon: rocketIcon,
-        properties: [
-            {
-                title: "Presale Creator",
-                url: "/presale/create"
-            },
-            {
-                title: "Presale List",
-                url: "/presale"
-            },
-        ]
-    },
-    {
-        title: 'Token Manager',
-        icon: digitalOceanIcon,
-        properties: [
-            {
-                title: "Solana Token Creator",
-                url: "/token/create"
-            },
-            {
-                title: "Revoke Mint Authority",
-                url: "/"
-            },
-            {
-                title: "Burn Liquidity",
-                url: "/"
-            },
-        ]
-    },
-    {
-        title: 'Locker',
-        icon: lockIcon,
-        properties: [
-            {
-                title: "Create Lock",
-                url: "/lock/create"
-            },
-            {
-                title: "Token",
-                url: "/lock/token"
-            },
-            {
-                title: "Liquidity",
-                url: "/lock/liquidity"
-            },
-        ]
-    },
-    {
-        title: 'Airdrop Hub',
-        icon: giftIcon
-    },
-    {
-        title: 'Staking',
-        icon: databaseIcon
-    }
-]
 
 const socials = [
     { 
@@ -103,7 +20,7 @@ const socials = [
     },
     { 
         title: 'Stake', 
-        icon: telegramIcon,
+        icon: telIcon,
         url: config.telegramlink
     },
     { 

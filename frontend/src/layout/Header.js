@@ -38,8 +38,8 @@ export default function Header() {
                 <div className="font-dm text-[14px] font-bold text-black dark:text-white">Data</div>
             </div>
             <div className="flex flex-row items-center xs:gap-2 gap-12">
-                <div className={`flex justify-center w-12 h-12 rounded-full items-center ${darkMode ? "bg-[#232323] border border-[#EDECEC]" : "bg-white"}`}>
-                    <img src={darkMode ? sunIcon : moonIcon} width="24px" height="24px" onClick={() => { switchColorTheme(!darkMode) }} />
+                <div className={`flex justify-center w-6 h-6 rounded-full items-center ${darkMode ? "bg-[#232323] border border-[#EDECEC]" : "bg-white"}`}>
+                    <img src={darkMode ? sunIcon : moonIcon} width="15px" height="15px" onClick={() => { switchColorTheme(!darkMode) }} />
                 </div>
                 <div className="xs:hidden flex bg-[#F6CE0E] dark:bg-transparent dark:border dark:border-[#F6CE0E] h-12 px-[20px] items-center rounded">
                     <p className="font-[Poppins] text-[14px ] font-black text-black dark:text-[#F6CE0E]">BUY HBEARZ</p>
