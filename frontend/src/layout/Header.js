@@ -7,6 +7,7 @@ import { useGlobalContext } from '../providers/GlobalProvider';
 import moonIcon from "../assets/icons/moon.svg";
 import sunIcon from "../assets/icons/sun.svg";
 import mainLogo from "../assets/icons/main-logo.png";
+import config from "../config";
 
 export default function Header() {
 
@@ -33,19 +34,18 @@ export default function Header() {
                 <p className="font-dm text-[30px] font-bold text-black dark:text-white">Habibearz</p>
             </div>
             <div className="xs:hidden flex flex-row gap-8">
-                <div className="font-dm text-[14px] font-bold text-black dark:text-white">Home</div>
-                <div className="font-dm text-[14px] font-bold text-black dark:text-white">DeFi</div>
-                <div className="font-dm text-[14px] font-bold text-black dark:text-white">Data</div>
+                <div className="font-dm text-[14px] font-bold text-black dark:text-white cursor-pointer">Home</div>
+                <div className="font-dm text-[14px] font-bold text-black dark:text-white cursor-pointer">DeFi</div>
+                <div className="font-dm text-[14px] font-bold text-black dark:text-white cursor-pointer">Data</div>
             </div>
             <div className="flex flex-row items-center xs:gap-2 gap-12">
-                <div className={`flex justify-center w-6 h-6 rounded-full items-center ${darkMode ? "bg-[#232323] border border-[#EDECEC]" : "bg-white"}`}>
+                <div className={`flex justify-center cursor-pointer w-6 h-6 rounded-full items-center ${darkMode ? "bg-[#232323] border border-[#EDECEC]" : "bg-white"}`}>
                     <img src={darkMode ? sunIcon : moonIcon} width="15px" height="15px" onClick={() => { switchColorTheme(!darkMode) }} />
                 </div>
-                <div className="xs:hidden flex bg-[#F6CE0E] dark:bg-transparent dark:border dark:border-[#F6CE0E] h-12 px-[20px] items-center rounded">
+                <a href={config.buylink} target="_blank" alt="pancakeswap link" className="xs:hidden flex cursor-pointer bg-[#F6CE0E] dark:bg-transparent dark:border dark:border-[#F6CE0E] h-12 px-[20px] items-center rounded hover:-translate-y-1">
                     <p className="font-[Poppins] text-[14px ] font-black text-black dark:text-[#F6CE0E]">BUY HBEARZ</p>
-                </div>
+                </a>
                 <RiMenuLine className={`hidden xs:flex text-black dark:text-white w-6 h-6`} onClick={() => { showNavFunc(true) }} />
-
             </div>
         </div>
     )

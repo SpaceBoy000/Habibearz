@@ -420,3 +420,9 @@
     background: white !important;
     color: blue;
 }
+
+img {
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
