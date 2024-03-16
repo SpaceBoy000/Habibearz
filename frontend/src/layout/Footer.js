@@ -14,9 +14,9 @@ export default function Footer() {
     const [colorMode, setColorMode] = useState(false); // false: dark mode, true: light mode
 
     return (
-        <div className="pt-8">
-            <div className="bg-[#979797] h-[1px] mx-8"/>
-            <div className='dark:bg-[#171717] bg-[#FCFCFC] flex xs:flex-col flex-row justify-between xs:justify-between items-center px-8 pb-8 pt-8'>
+        <div className="pt-8 px-16">
+            <div className="bg-[#979797] h-[1px]"/>
+            <div className='dark:bg-[#171717] bg-[#FCFCFC] flex xs:flex-col flex-row justify-between xs:justify-between items-center pb-8 pt-8'>
                 <div className="flex flex-row items-center gap-2">
                     <img src={mainLogo} width="36px" className="rounded-full" />
                     <p className="font-dm text-[24px] font-bold text-black dark:text-white">HBEARZ</p>

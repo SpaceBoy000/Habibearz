@@ -27,24 +27,25 @@ export default function Header() {
     }
 
     return (
-        <div className='dark:bg-[#171717] bg-[#FCFCFC] flex justify-between xs:justify-between items-center px-8 py-4'>
-            <RiMenuLine className={`hidden xs:flex text-white dark:text-black w-6 h-6`} onClick={() => { showNavFunc(true) }} />
+        <div className='dark:bg-[#171717] bg-[#FCFCFC] flex justify-between xs:justify-between items-center xs:px-4 px-8 py-4'>
             <div className="flex flex-row items-center gap-2">
-                <img src={mainLogo} width="48px" className="rounded-full"/>
-                <p className="xs:hidden font-dm text-[30px] font-bold text-black dark:text-white">Habibearz</p>
+                <img src={mainLogo} width="48px" className="rounded-full" />
+                <p className="font-dm text-[30px] font-bold text-black dark:text-white">Habibearz</p>
             </div>
             <div className="xs:hidden flex flex-row gap-8">
                 <div className="font-dm text-[14px] font-bold text-black dark:text-white">Home</div>
                 <div className="font-dm text-[14px] font-bold text-black dark:text-white">DeFi</div>
                 <div className="font-dm text-[14px] font-bold text-black dark:text-white">Data</div>
             </div>
-            <div className="flex flex-row xs:gap-2 gap-12">
+            <div className="flex flex-row items-center xs:gap-2 gap-12">
                 <div className={`flex justify-center w-12 h-12 rounded-full items-center ${darkMode ? "bg-[#232323] border border-[#EDECEC]" : "bg-white"}`}>
                     <img src={darkMode ? sunIcon : moonIcon} width="24px" height="24px" onClick={() => { switchColorTheme(!darkMode) }} />
                 </div>
-                <div className="bg-[#F6CE0E] dark:bg-transparent dark:border dark:border-[#F6CE0E] h-12 px-[20px] flex items-center rounded">
+                <div className="xs:hidden flex bg-[#F6CE0E] dark:bg-transparent dark:border dark:border-[#F6CE0E] h-12 px-[20px] items-center rounded">
                     <p className="font-[Poppins] text-[14px ] font-black text-black dark:text-[#F6CE0E]">BUY HBEARZ</p>
                 </div>
+                <RiMenuLine className={`hidden xs:flex text-black dark:text-white w-6 h-6`} onClick={() => { showNavFunc(true) }} />
+
             </div>
         </div>
     )
