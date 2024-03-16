@@ -9,6 +9,12 @@ import insIcon from "../assets/icons/socials/instagram.png";
 
 import characImg from "../assets/images/character.png";
 import img1 from "../assets/images/image1.png";
+import img2 from "../assets/images/image2.png";
+import img3 from "../assets/images/image3.png";
+import img4 from "../assets/images/image4.png";
+import img5 from "../assets/images/image5.png";
+import img6 from "../assets/images/image6.png";
+import img7 from "../assets/images/image7.png";
 
 import qrcodeImg from "../assets/images/qrcode.png";
 import toTheMoonImg from "../assets/images/to-the-moon.png";
@@ -29,7 +35,7 @@ import partnership2Img from "../assets/images/partnership2.png";
 import partnership3Img from "../assets/images/partnership3.png";
 import partnership4Img from "../assets/images/partnership4.png";
 
-import tokenomics1Img from "../assets/images/tokenomics1.png";
+import tokenomicsImg from "../assets/images/tokenomics.png";
 
 import checkedIcon from "../assets/icons/check.svg";
 import failIcon from "../assets/icons/fail.svg";
@@ -208,7 +214,7 @@ export default function Home() {
 
     return (
         <div className="">
-            <div id="banner" className="flex lg:flex-row flex-col xs:p-4 px-16">
+            <div id="banner" className="flex lg:flex-row flex-col xs:p-4 px-16 pt-8">
                 <div className='flex flex-col gap-4 text-center justify-center lg:text-left w-full lg:w-1/2'>
                     <div className="flex gap-2 items-center xs:self-center">
                         <div className="bg-[#F6CE0E] w-7 lg:w-0 h-[2px]" />
@@ -226,7 +232,7 @@ export default function Home() {
                         <p className="font-[Poppins] text-[14px] font-bold text-black dark:text-[#F6CE0E]">Download Whitepaper</p>
                     </div>
                 </div>
-                <div>
+                <div className="max-w-full lg:max-w-[50%] flex justify-center">
                     <img src={bannerImg} />
                 </div>
             </div>
@@ -250,12 +256,12 @@ export default function Home() {
                 </div>
             </div>
             <div id="body" className="pt-8 xs:px-4 p-16">
-                <div className="flex gap-2 items-center justify-center py-4">
-                    <div className="bg-[#F6CE0E] xs:w-7 w-0 h-[2px]" />
+                <div className="flex gap-2 items-center justify-center lg:justify-start py-4">
+                    <div className="bg-[#F6CE0E] w-7 lg:w-0 h-[2px]" />
                     <p className="text-[#F6CE0E] uppercase xs:text-[12px] text-[16px] font-bold">How HBEARZ DeFi 2.0 Works</p>
                     <div className="bg-[#F6CE0E] w-7 h-[2px]" />
                 </div>
-                <div className="xs:text-center text-left xs:w-full w-1/2  flex flex-col gap-4">
+                <div className="text-center lg:text-left w-full lg:w-1/2  flex flex-col gap-4">
                     <p className="xs:text-[24px] text-[36px] font-bold text-black dark:text-white">Receive sustainable rewards inside our DeFi platform as we build the Habibi Metaverse</p>
                     <p className="xs:text-[14px] text-[18px] font-normal text-black dark:text-white">In a evolution of DeFi and Metaverse platforms HBEARZ has the opportunity to participate in not only token rewards, but the rewards of the metaverses revenue</p>
                 </div>
@@ -282,7 +288,7 @@ export default function Home() {
                         </div>
                     </div>
                     <div className="w-full">
-                        <img src={img1} />
+                        <img src={img2} />
                     </div>
                 </div>
                 <div className="flex xs:flex-col flex-row gap-8 pt-16">
@@ -295,7 +301,7 @@ export default function Home() {
                         </div>
                     </div>
                     <div className="w-full">
-                        <img src={img1} />
+                        <img src={img3} />
                     </div>
                 </div>
                 <div className="flex xs:flex-col flex-row-reverse gap-8 pt-16">
@@ -308,7 +314,7 @@ export default function Home() {
                         </div>
                     </div>
                     <div className="w-full">
-                        <img src={img1} />
+                        <img src={img4} />
                     </div>
                 </div>
                 <div className="flex xs:flex-col flex-row gap-8 pt-16">
@@ -321,7 +327,7 @@ export default function Home() {
                         </div>
                     </div>
                     <div className="w-full">
-                        <img src={img1} />
+                        <img src={img5} />
                     </div>
                 </div>
                 <div className="flex xs:flex-col flex-row-reverse gap-8 pt-16">
@@ -334,7 +340,7 @@ export default function Home() {
                         </div>
                     </div>
                     <div className="w-full">
-                        <img src={img1} />
+                        <img src={img6} />
                     </div>
                 </div>
                 <div className="flex xs:flex-col flex-row gap-8 pt-16">
@@ -347,7 +353,7 @@ export default function Home() {
                         </div>
                     </div>
                     <div className="w-full">
-                        <img src={img1} />
+                        <img src={img7} />
                     </div>
                 </div>
             </div>
@@ -360,11 +366,11 @@ export default function Home() {
                             <div className="bg-[#F6CE0E] w-7 h-[2px]" />
                         </div>
                         <div className="flex flex-col">
-                            <p className="xs:text-center text-left xs:text-[24px] text-[36px] font-bold text-white dark:text-black">Hyper-deflationary tokenomics to balance the HBEARZ DeFi Ecosystem</p>
-                            <p className="xs:text-center text-left xs:text-[12px] text-[18px] font-normal text-white dark:text-black pb-4 pt-4">
+                            <p className="xs:text-center text-left xs:text-[24px] text-[36px] font-bold text-white">Hyper-deflationary tokenomics to balance the HBEARZ DeFi Ecosystem</p>
+                            <p className="xs:text-center text-left xs:text-[12px] text-[18px] font-normal text-white pb-4 pt-4">
                                 BBB is HBEARZ Coin’s inbuilt functionality that allows it to have aggressively deflationary tokenomics to halve and burn tokens from the Burn (BBB) address.
                             </p>
-                            <p className="xs:text-center text-left xs:text-[12px] text-[18px] font-normal text-white dark:text-black max-w-[1052px]">
+                            <p className="xs:text-center text-left xs:text-[12px] text-[18px] font-normal text-white max-w-[1052px]">
                                 Quarterly burning will be implemented until half of the total supply of tokens are removed from existence within four years.
                             </p>
                         </div>
@@ -411,7 +417,7 @@ export default function Home() {
                     <p className="xs:text-[24px] text-[36px] font-bold text-black dark:text-white">Enter the World of Habibiverz</p>
                     <p className="xs:text-[14px] text-[18px] font-normal text-black dark:text-white max-w-[1052px]">the next evolution in DeFi platforms. ShibaSwap gives users the ability to provide liquidity, stake, and swap tokens to gain returns through our sophisticated and innovative passive income reward system</p>
                 </div>
-                <div className="flex justify-center pt-16">
+                <div className="flex justify-center py-16">
                     <img src={cityImg} />
                 </div>
                 <div className="flex xs:flex-col flex-row justify-between gap-8">
@@ -421,11 +427,11 @@ export default function Home() {
                     </div>
                     <div className="relative max-w-[380px]">
                         <img src={city2Img} />
-                        <p className="absolute bottom-[-20px] left-[calc(50%-100px)] text-[20px] font-bold py-2 px-8 bg-white dark:bg-[#303030] rounded-xl text-black dark:text-white">Buy the NFTs</p>
+                        <p className="absolute bottom-[-20px] left-[calc(50%-125px)] text-[20px] font-bold py-2 px-8 bg-white dark:bg-[#303030] rounded-xl text-black dark:text-white">Meet the Characters</p>
                     </div>
                     <div className="relative max-w-[380px]">
                         <img src={city3Img} />
-                        <p className="absolute bottom-[-20px] left-[calc(50%-100px)] text-[20px] font-bold py-2 px-8 bg-white dark:bg-[#303030] rounded-xl text-black dark:text-white">Buy the NFTs</p>
+                        <p className="absolute bottom-[-20px] left-[calc(50%-140px)] text-[20px] font-bold py-2 px-8 bg-white dark:bg-[#303030] rounded-xl text-black dark:text-white">Pre-order the Comics</p>
                     </div>
                 </div>
 
@@ -438,7 +444,7 @@ export default function Home() {
                         <img src={phoneImg} />
                     </div>
                     <div className='flex flex-col gap-4 xs:text-center text-left w-full'>
-                        <div className="flex gap-2 items-center justify-center">
+                        <div className="flex gap-2 items-center xs:justify-center justify-start">
                             <div className="bg-[#F6CE0E] xs:w-7 w-0 h-[2px]" />
                             <p className="text-[#F6CE0E] uppercase text-[16px] font-bold">Game</p>
                             <div className="bg-[#F6CE0E] w-7 h-[2px]" />
@@ -471,7 +477,7 @@ export default function Home() {
                     <p className="xs:text-[24px] text-[36px] font-bold text-black dark:text-white">A Partnership with the Million Gardens Movement, for every $10 of Coins bought, a percentage helps to plant a tree</p>
                     <p className="xs:text-[14px] text-[18px] font-normal text-black dark:text-white max-w-[1052px]">We want to help rejuvenate the earth’s trees before we jet off into the Metaverse and explore the worlds of Habibiverz. Help us contribute to making this world a safer place, before we save other planets!</p>
                 </div>
-                <div className="flex xs:flex-col flex-row justify-between w-full gap-8 py-8">
+                <div className="flex xs:flex-col flex-row xs:items-center justify-between w-full gap-8 py-8">
                     <img src={partnership1Img} width="320px" />
                     <img src={partnership2Img} width="320px" />
                     <img src={partnership3Img} width="320px" />
@@ -487,8 +493,8 @@ export default function Home() {
                     <div className="bg-[#F6CE0E] w-7 h-[2px]" />
                 </div>
                 <div className="flex flex-col items-center text-center justify-center">
-                    <p className="xs:text-[24px] text-[36px] font-bold text-white dark:text-black max-w-[780px] leading-normal">Some people shoot for the moon, but HBEARZ just wants her own Universe</p>
-                    <p className="xs:text-[14px] text-[18px] font-normal text-white dark:text-black max-w-[1052px]">Our Comprehensive Meme Coin, DeFi Platform and Metaverse products have provided a sustainable tokenomic plan for short term growth and long term sustainability. Read 3 main ways we do this</p>
+                    <p className="xs:text-[24px] text-[36px] font-bold text-white max-w-[780px] leading-normal">Some people shoot for the moon, but HBEARZ just wants her own Universe</p>
+                    <p className="xs:text-[14px] text-[18px] font-normal text-white max-w-[1052px]">Our Comprehensive Meme Coin, DeFi Platform and Metaverse products have provided a sustainable tokenomic plan for short term growth and long term sustainability. Read 3 main ways we do this</p>
                 </div>
                 <div className="flex xs:flex-col flex-row xs:gap-4 gap-16 pt-8">
                     <div className="flex flex-col gap-4">
@@ -506,7 +512,7 @@ export default function Home() {
                         </div>
                     </div>
                     <div className="w-full flex items-center">
-                        <img src={tokenomics1Img} />
+                        <img src={tokenomicsImg} />
                     </div>
                 </div>
             </div>
@@ -606,19 +612,19 @@ export default function Home() {
                             Whether you want to follow HBEARZ's adventure throughout Habibiverz, want to help shape the story or just make money from our Ecosystem - it's up to you!
                         </p>
                     </div>
-                    <div className="w-full bg-[#55ACEE] rounded-lg xs:p-8 p-16">
-                        <img src={xImg} />
-                        <p className="text-[48px] font-bold text-white dark:text-black">50,000+</p>
-                        <p className="text-[24px] font-bold text-white dark:text-black">Follow us on Twitter #HBEARZOnlyFans</p>
+                    <div className="w-full bg-[#55ACEE] flex flex-col justify-between gap-8 rounded-lg xs:p-8 p-16">
+                        <img src={xImg} className="w-[60px]"/>
+                        <p className="xs:text-[44px] text-[48px] text-left font-bold text-white dark:text-black">50,000+</p>
+                        <p className="text-[24px] text-left font-bold text-white dark:text-black">Follow us on Twitter #HBEARZOnlyFans</p>
                     </div>
                     <div className="w-full flex flex-col gap-8">
                         <div className="bg-[#F6CE0E] p-8 rounded-lg">
-                            <p className="text-[48px] font-bold text-white dark:text-black">100,000+</p>
-                            <p className="text-[24px] font-bold text-white dark:text-black">Proud HBEARZ Holders</p>
+                            <p className="xs:text-[44px] text-[48px] text-left font-bold text-white dark:text-black">100,000+</p>
+                            <p className="text-[24px] text-left font-bold text-white dark:text-black">Proud HBEARZ Holders</p>
                         </div>
                         <div className="bg-[#8EAD5A] p-8 rounded-lg">
-                            <p className="text-[48px] font-bold text-white dark:text-black">500,000 +</p>
-                            <p className="text-[24px] font-bold text-white dark:text-black">People reached through Social Influencers</p>
+                            <p className="xs:text-[44px] text-[48px] text-left font-bold text-white dark:text-black">500,000 +</p>
+                            <p className="text-[24px] text-left font-bold text-white dark:text-black">People reached through Social Influencers</p>
                         </div>
                     </div>
                 </div>

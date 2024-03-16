@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./Home";
-import CreatePresale from "./pages/CreatePresale";
+
 import Navbar from "./layout/Navbar";
 import Header from "./layout/Header";
 import Footer from "./layout/Footer";
@@ -21,7 +21,6 @@ function App() {
                     <div>
                         <Routes>
                             <Route path="/" element={<Home />} />
-                            <Route path="/presale/create" element={<CreatePresale />} />
                         </Routes>
                     </div>
                     <Footer/>
