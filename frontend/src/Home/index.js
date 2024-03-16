@@ -39,6 +39,8 @@ import mark2Icon from "../assets/icons/mark2.svg";
 import mark3Icon from "../assets/icons/mark3.svg";
 import mark4Icon from "../assets/icons/mark4.svg";
 
+import arrowRightIcon from "../assets/icons/arrow-right.svg";
+
 import xImg from "../assets/images/x-image.svg";
 
 import chartImg from "../assets/images/chart.png";
@@ -228,10 +230,11 @@ export default function Home() {
                     <img src={bannerImg} />
                 </div>
             </div>
-            <div id="social" className="flex xs:flex-col flex-row text-left xs:p-4 p-16">
-                <div className="xs:hidden flex relative items-center">
-                    <p className="text-[24px] font-bold text-black dark:text-white pr-[132px]">Join our<br />community</p>
-                    <img src={characImg} width="132px" className="absolute right-0 -bottom-4" />
+            <div id="social" className="flex xs:flex-col flex-row text-left xs:p-4 p-16 gap-4">
+                <div className="xs:hidden flex flex-col relative items-start bg-[#FFFBE7] rounded-lg p-4">
+                    <p className="text-[24px] font-bold text-black pr-[132px]">Join our<br />community</p>
+                    <p className="text-[#F6CE0E] text-[14px] font-bold flex">Join now<img src={arrowRightIcon}/></p>
+                    <img src={characImg} width="132px" className="absolute right-0 bottom-0" />
                 </div>
                 <div className="flex flex-wrap flex-row gap-4 justify-center">
                     {
