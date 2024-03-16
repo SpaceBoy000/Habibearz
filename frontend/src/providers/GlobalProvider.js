@@ -9,7 +9,7 @@ export const GlobalContext = createContext({
 
 export const GlobalProvider = ({ children }) => {
     const [darkMode, setDarkMode] = useState(false);
-    const [showNav, setShowNav] = useState(true);
+    const [showNav, setShowNav] = useState(false);
 
     // useEffect(() =>{
     //     if (window.innerWidth <= 600) {
