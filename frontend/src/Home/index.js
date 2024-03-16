@@ -206,6 +206,51 @@ const tokenomics = [
     { title: "Staking Allotment", amount: "50%" }
 ]
 
+const mainContents = [
+    {
+        hint: 'Enter the Habibiverz Ecosystem',
+        title: 'Buy HBEARZ Token',
+        content: "Purchase the HBEARZ token from a launchpad sale or from a DEX. The CRYPTO coin can only be acquired through staking HBEARZ",
+        image: img1
+    },
+    {
+        hint: 'Recieve Tokens Rewards',
+        title: 'Stake the HBEARZ Token',
+        content: "Stake the HBEARZ token and recieve HBEARZ and the Habibiverz (CRYPTO) Token as a reward",
+        image: img2
+    },
+    {
+        hint: 'Earn Revenue',
+        title: 'HODL for 25% of HABIBIVERZ Profits',
+        content: "Each quarter profits from the Habibiverz Metaverse, including HBEARZCoin, Habibiverz NFTs and Elders of the Realms will be deposited into CRYPTO holders wallets",
+        image: img3
+    },
+    {
+        hint: 'Compound Interest',
+        title: 'Exchange LP Tokens for More Tokens',
+        content: "Swap your HBEARZ and CRYPTO LP tokens for discounted tokens, then compound your staking or bonds to recieve more",
+        image: img4
+    },
+    {
+        hint: 'Treasury Growth',
+        title: 'Increased HBEARZ & CRYPTO Value',
+        content: "The inflow of LP tokens are used to back HBEARZ and CRYPTO tokens, stabilise the price of the tokens and regulate the APY.",
+        image: img5
+    },
+    {
+        hint: 'Farm for ETH',
+        title: 'Farm the HBEARZ & CRYPTO Pair',
+        content: "Deposit the HBEARZ and Habibiverz Tokens on the Paradis DEX to recieve upto a 5% monthly reward in Etheruem (ETH)",
+        image: img6
+    },
+    {
+        hint: 'HODL and Profit from the Ecosystem',
+        title: 'Stable Token, Revenue and Rewards',
+        content: "LP fees, two treasury backed tokens and the Habibiverz Metaverse provides the foundation for stable value, long term vision and a communal reward system",
+        image: img7
+    },
+]
+
 export default function Home() {
 
     const [activeTab, setActiveTab] = useState(1);
@@ -246,7 +291,7 @@ export default function Home() {
             <div id="social" className="flex xs:flex-col flex-row text-left xs:p-4 p-16 gap-4">
                 <div className="xs:hidden flex flex-col relative items-start bg-[#FFFBE7] rounded-lg p-4">
                     <p className="text-[24px] font-bold text-black pr-[132px]">Join our<br />community</p>
-                    <p className="text-[#F6CE0E] text-[14px] font-bold flex">Join now<img src={arrowRightIcon}/></p>
+                    <p className="text-[#F6CE0E] text-[14px] font-bold flex">Join now<img src={arrowRightIcon} /></p>
                     <img src={characImg} width="132px" className="absolute right-0 bottom-0" />
                 </div>
                 <div className="flex flex-wrap flex-row gap-4 justify-center">
@@ -272,97 +317,29 @@ export default function Home() {
                     <p className="xs:text-[24px] text-[36px] font-bold text-black dark:text-white">Receive sustainable rewards inside our DeFi platform as we build the Habibi Metaverse</p>
                     <p className="xs:text-[14px] text-[18px] font-normal text-black dark:text-white">In a evolution of DeFi and Metaverse platforms HBEARZ has the opportunity to participate in not only token rewards, but the rewards of the metaverses revenue</p>
                 </div>
-                <div className="flex xs:flex-col flex-row gap-8 pt-16">
-                    <div className="w-full flex xs:flex-col flex-row items-center gap-4">
-                        <div className="bg-[#FED201] text-[36px] font-bold rounded-full !w-16 !h-16 px-6 flex items-center">1</div>
-                        <div className="xs:text-center text-left flex flex-col gap-1">
-                            <p className="text-[18px] font-bold text-[#969696] dark:text-[#FED201]">Enter the Habibiverz Ecosystem</p>
-                            <p className="xs:text-[24px] text-[30px] font-bold text-black dark:text-white">Buy HBEARZ Token</p>
-                            <p className="xs:text-[14px] text-[18px] font-normal text-black dark:text-white">Purchase the HBEARZ token from a launchpad sale or from a DEX. The CRYPTO coin can only be acquired through staking HBEARZ</p>
-                        </div>
-                    </div>
-                    <div className="w-full">
-                        <img src={img1} />
-                    </div>
-                </div>
-                <div className="flex xs:flex-col flex-row-reverse gap-8 pt-16">
-                    <div className="w-full flex  xs:flex-col flex-row items-center gap-4">
-                        <div className="bg-[#FED201] text-[36px] font-bold rounded-full !w-16 !h-16 px-6 flex items-center">2</div>
-                        <div className="xs:text-center text-left flex flex-col gap-1">
-                            <p className="text-[18px] font-bold text-[#969696] dark:text-[#FED201]">Recieve Tokens Rewards</p>
-                            <p className="xs:text-[24px] text-[30px] font-bold text-black dark:text-white">Stake the HBEARZ Token</p>
-                            <p className="xs:text-[14px] text-[18px] font-normal text-black dark:text-white">Stake the HBEARZ token and recieve HBEARZ and the Habibiverz (CRYPTO) Token as a reward</p>
-                        </div>
-                    </div>
-                    <div className="w-full">
-                        <img src={img2} />
-                    </div>
-                </div>
-                <div className="flex xs:flex-col flex-row gap-8 pt-16">
-                    <div className="w-full flex  xs:flex-col flex-row items-center gap-4">
-                        <div className="bg-[#FED201] text-[36px] font-bold rounded-full !w-16 !h-16 px-6 flex items-center">3</div>
-                        <div className="xs:text-center text-left flex flex-col gap-1">
-                            <p className="text-[18px] font-bold text-[#969696] dark:text-[#FED201]">Earn Revenue</p>
-                            <p className="xs:text-[24px] text-[30px] font-bold text-black dark:text-white">HODL for 25% of HABIBIVERZ Profits</p>
-                            <p className="xs:text-[14px] text-[18px] font-normal text-black dark:text-white">Each quarter profits from the Habibiverz Metaverse, including HBEARZCoin, Habibiverz NFTs and Elders of the Realms will be deposited into  CRYPTO holders wallets</p>
-                        </div>
-                    </div>
-                    <div className="w-full">
-                        <img src={img3} />
-                    </div>
-                </div>
-                <div className="flex xs:flex-col flex-row-reverse gap-8 pt-16">
-                    <div className="w-full flex  xs:flex-col flex-row items-center gap-4">
-                        <div className="bg-[#FED201] text-[36px] font-bold rounded-full !w-16 !h-16 px-6 flex items-center">4</div>
-                        <div className="xs:text-center text-left flex flex-col gap-1">
-                            <p className="text-[18px] font-bold text-[#969696] dark:text-[#FED201]">Compound Interest</p>
-                            <p className="xs:text-[24px] text-[30px] font-bold text-black dark:text-white">Exchange LP Tokens for More Tokens</p>
-                            <p className="xs:text-[14px] text-[18px] font-normal text-black dark:text-white">Swap your HBEARZ and CRYPTO LP tokens for discounted tokens, then compound your staking or bonds to recieve more </p>
-                        </div>
-                    </div>
-                    <div className="w-full">
-                        <img src={img4} />
-                    </div>
-                </div>
-                <div className="flex xs:flex-col flex-row gap-8 pt-16">
-                    <div className="w-full flex  xs:flex-col flex-row items-center gap-4">
-                        <div className="bg-[#FED201] text-[36px] font-bold rounded-full !w-16 !h-16 px-6 flex items-center">5</div>
-                        <div className="xs:text-center text-left flex flex-col gap-1">
-                            <p className="text-[18px] font-bold text-[#969696] dark:text-[#FED201]">Treasury Growth</p>
-                            <p className="xs:text-[24px] text-[30px] font-bold text-black dark:text-white">Increased HBEARZ & CRYPTO Value</p>
-                            <p className="xs:text-[14px] text-[18px] font-normal text-black dark:text-white">The inflow of LP tokens are used to back HBEARZ and CRYPTO tokens, stabilise the price of the tokens and regulate the APY. </p>
-                        </div>
-                    </div>
-                    <div className="w-full">
-                        <img src={img5} />
-                    </div>
-                </div>
-                <div className="flex xs:flex-col flex-row-reverse gap-8 pt-16">
-                    <div className="w-full flex  xs:flex-col flex-row items-center gap-4">
-                        <div className="bg-[#FED201] text-[36px] font-bold rounded-full !w-16 !h-16 px-6 flex items-center">6</div>
-                        <div className="xs:text-center text-left flex flex-col gap-1">
-                            <p className="text-[18px] font-bold text-[#969696] dark:text-[#FED201]">Farm for ETH</p>
-                            <p className="xs:text-[24px] text-[30px] font-bold text-black dark:text-white">Farm the HBEARZ & CRYPTO Pair</p>
-                            <p className="xs:text-[14px] text-[18px] font-normal text-black dark:text-white">Deposit the HBEARZ and Habibiverz Tokens on the Paradis DEX to recieve upto a 5% monthly reward in Etheruem (ETH)</p>
-                        </div>
-                    </div>
-                    <div className="w-full">
-                        <img src={img6} />
-                    </div>
-                </div>
-                <div className="flex xs:flex-col flex-row gap-8 pt-16">
-                    <div className="w-full flex  xs:flex-col flex-row items-center gap-4">
-                        <div className="bg-[#FED201] text-[36px] font-bold rounded-full !w-16 !h-16 px-6 flex items-center">7</div>
-                        <div className="xs:text-center text-left flex flex-col gap-1">
-                            <p className="text-[18px] font-bold text-[#969696] dark:text-[#FED201]">HODL and Profit from the Ecosystem</p>
-                            <p className="xs:text-[24px] text-[30px] font-bold text-black dark:text-white">Stable Token, Revenue and Rewards</p>
-                            <p className="xs:text-[14px] text-[18px] font-normal text-black dark:text-white">LP fees, two treasury backed tokens and the Habibiverz Metaverse provides the foundation for stable value, long term vision and a communal reward system</p>
-                        </div>
-                    </div>
-                    <div className="w-full">
-                        <img src={img7} />
-                    </div>
-                </div>
+                {
+                    mainContents.map((item, index) => {
+                        return (
+                            <div className={`flex xs:flex-col ${index % 2 == 0 ? "flex-row" : "flex-row-reverse"} gap-8 pt-16`}>
+                                <div className="flex items-center">
+                                    <div className="w-full flex xs:flex-col flex-row xs:items-center items-start gap-4">
+                                        <div>
+                                            <div className="bg-[#FED201] w-[48px] h-[48px] rounded-full flex items-center justify-center text-[36px] font-bold">{index + 1}</div>
+                                        </div>
+                                        <div className="xs:text-center text-left flex flex-col gap-1 pt-2">
+                                            <p className="text-[18px] font-bold text-[#969696] dark:text-[#FED201]">{item.hint}</p>
+                                            <p className="xs:text-[24px] text-[30px] font-bold text-black dark:text-white">{item.title}</p>
+                                            <p className="xs:text-[14px] text-[18px] font-normal text-black dark:text-white">{item.content}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="w-full">
+                                    <img src={item.image} />
+                                </div>
+                            </div>
+                        );
+                    })
+                }
             </div>
             <div id="platform" className="bg-[#1C2635] xs:p-8 p-16">
                 <div className="flex xs:flex-col flex-row gap-8">
@@ -467,8 +444,8 @@ export default function Home() {
                         <div className="flex items-center xs:justify-center justify-start flex-wrap gap-8 xs:pt-4 pt-16">
                             <p className="text-[18px] font-bold text-black dark:text-white">Available on:</p>
                             <div className="flex gap-4 justify-center">
-                                <img src={googlePlayImg} className="cursor-pointer hover:-translate-y-1"/>
-                                <img src={appStoreImg} className="cursor-pointer hover:-translate-y-1"/>
+                                <img src={googlePlayImg} className="cursor-pointer hover:-translate-y-1" />
+                                <img src={appStoreImg} className="cursor-pointer hover:-translate-y-1" />
                             </div>
                         </div>
                     </div>
@@ -484,7 +461,7 @@ export default function Home() {
                     <p className="xs:text-[24px] text-[36px] font-bold text-black dark:text-white">A Partnership with the Million Gardens Movement, for every $10 of Coins bought, a percentage helps to plant a tree</p>
                     <p className="xs:text-[14px] text-[18px] font-normal text-black dark:text-white max-w-[1052px]">We want to help rejuvenate the earth’s trees before we jet off into the Metaverse and explore the worlds of Habibiverz. Help us contribute to making this world a safer place, before we save other planets!</p>
                 </div>
-                <div className="flex xs:flex-col flex-row xs:items-center justify-between w-full gap-8 py-8">
+                <div className="flex xs:flex-col flex-row  xs:items-center justify-between w-full gap-8 py-8">
                     <img src={partnership1Img} width="320px" />
                     <img src={partnership2Img} width="320px" />
                     <img src={partnership3Img} width="320px" />
@@ -620,7 +597,7 @@ export default function Home() {
                         </p>
                     </div>
                     <div className="w-full bg-[#55ACEE] flex flex-col justify-between gap-8 rounded-lg xs:p-8 p-16">
-                        <img src={xImg} className="w-[60px]"/>
+                        <img src={xImg} className="w-[60px]" />
                         <p className="xs:text-[44px] text-[48px] text-left font-bold text-white dark:text-black">50,000+</p>
                         <p className="text-[24px] text-left font-bold text-white dark:text-black">Follow us on Twitter #HBEARZOnlyFans</p>
                     </div>
@@ -682,7 +659,7 @@ export default function Home() {
                         <br /><br />
                         Feel free to donate to the official ERC 20 donation wallet
                         <br /><br />
-                        <span className="break-words cursor-pointer hover:text-[#F6CE0E]" onClick={() => handleClickCopy(config.donateAdr)}>{ config.donateAdr }</span>
+                        <span className="break-words cursor-pointer hover:text-[#F6CE0E]" onClick={() => handleClickCopy(config.donateAdr)}>{config.donateAdr}</span>
                         <br /><br />
                         <span className="font-bold">Accepted</span>: Any ERC20 token
                         <br />

@@ -28,7 +28,7 @@ export default function Header() {
     }
 
     return (
-        <div className='dark:bg-[#171717] bg-[#FCFCFC] flex justify-between xs:justify-between items-center xs:px-4 px-8 py-4'>
+        <div className='dark:bg-[#171717] bg-[#FCFCFC] flex justify-between xs:justify-between items-center xs:px-4 px-16 py-4'>
             <div className="flex flex-row items-center gap-2">
                 <img src={mainLogo} width="48px" className="rounded-full" />
                 <p className="font-dm text-[30px] font-bold text-black dark:text-white">Habibearz</p>
