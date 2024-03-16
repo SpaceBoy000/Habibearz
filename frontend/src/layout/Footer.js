@@ -25,8 +25,8 @@ export default function Footer() {
                 <div className="xs:flex hidden bg-[#979797] w-full h-[1px] mt-2 mb-4"/>
                 <div className="flex flex-row xs:gap-4 gap-8">
                     <div className="font-dm text-[14px] font-bold text-[#6E6E6E] dark:text-white xs:hidden">@2021 Paradis Smart Chain</div>
-                    <div className="font-dm text-[14px] font-bold text-[#6E6E6E] dark:text-white">Privacy Policy</div>
-                    <div className="font-dm text-[14px] font-bold text-[#6E6E6E] dark:text-white">Terms of Service</div>
+                    <div className="font-dm text-[14px] font-bold text-[#6E6E6E] dark:text-white cursor-pointer">Privacy Policy</div>
+                    <div className="font-dm text-[14px] font-bold text-[#6E6E6E] dark:text-white cursor-pointer">Terms of Service</div>
                     <div className="xs:flex hidden flex-row gap-1">
                         <img src={flagUSIcon} />
                         <p className="font-[Poppins] text-[14px] font-bold text-black dark:text-[#F6CE0E]">English</p>

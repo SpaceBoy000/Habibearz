@@ -53,12 +53,14 @@ import chartImg from "../assets/images/chart.png";
 
 import noMarkIcon from "../assets/icons/no-mark.png";
 
+import config from "../config";
+import { toast } from "react-toastify";
 
 const socials = [
-    { title: "Telegram", icon: telIcon, content: "Chat in real time with the Eden community", link: "" },
-    { title: "Twitter", icon: xIcon, content: "Chat in real time with the Eden community", link: "" },
-    { title: "Discord", icon: discordIcon, content: "Chat in real time with the Eden community", link: "" },
-    { title: "Instagram", icon: insIcon, content: "Chat in real time with the Eden community", link: "" },
+    { title: "Telegram", icon: telIcon, content: "Chat in real time with the Eden community", link: config.telegramlink },
+    { title: "Twitter", icon: xIcon, content: "Chat in real time with the Eden community", link: config.twitterlink },
+    { title: "Discord", icon: discordIcon, content: "Chat in real time with the Eden community", link: config.discordlink },
+    { title: "Instagram", icon: insIcon, content: "Chat in real time with the Eden community", link: config.instagramLink },
 ]
 
 const roadmaps = [
@@ -212,6 +214,11 @@ export default function Home() {
         setActiveTab(value);
     }
 
+    const handleClickCopy = (value) => {
+        navigator.clipboard.writeText(value);
+        toast.success('Successfully copied!');
+    }
+
     return (
         <div className="">
             <div id="banner" className="flex lg:flex-row flex-col xs:p-4 px-16 pt-8">
@@ -228,7 +235,7 @@ export default function Home() {
                         <br />
                         Come along the journey and be part of this self-sustaining ecosystem that drives its value to a sustainable model.
                     </p>
-                    <div className="bg-[#F6CE0E] dark:bg-transparent dark:border dark:border-[#F6CE0E] h-12 px-[15px] flex items-center rounded w-fit self-center lg:self-start">
+                    <div className="bg-[#F6CE0E] dark:bg-transparent dark:border dark:border-[#F6CE0E] h-12 px-[15px] flex items-center rounded w-fit self-center lg:self-start cursor-pointer hover:-translate-y-1">
                         <p className="font-[Poppins] text-[14px] font-bold text-black dark:text-[#F6CE0E]">Download Whitepaper</p>
                     </div>
                 </div>
@@ -246,10 +253,10 @@ export default function Home() {
                     {
                         socials.map((item, index) => {
                             return (
-                                <div className="flex flex-col items-center justify-center w-[132px] h-[132px] p-4 border border-[#494949] rounded-lg" key={index}>
+                                <a href={item.link} target="_blank" alt={item.title} className="cursor-pointer hover:-translate-y-2 flex flex-col items-center justify-center w-[132px] h-[132px] p-4 border border-[#494949] rounded-lg" key={index}>
                                     <img src={item.icon} width="60px" />
                                     <p className="text-[16px] font-bold text-black dark:text-white">{item.title}</p>
-                                </div>
+                                </a>
                             );
                         })
                     }
@@ -460,8 +467,8 @@ export default function Home() {
                         <div className="flex items-center xs:justify-center justify-start flex-wrap gap-8 xs:pt-4 pt-16">
                             <p className="text-[18px] font-bold text-black dark:text-white">Available on:</p>
                             <div className="flex gap-4 justify-center">
-                                <img src={googlePlayImg} />
-                                <img src={appStoreImg} />
+                                <img src={googlePlayImg} className="cursor-pointer hover:-translate-y-1"/>
+                                <img src={appStoreImg} className="cursor-pointer hover:-translate-y-1"/>
                             </div>
                         </div>
                     </div>
@@ -664,7 +671,7 @@ export default function Home() {
             </div>
             <div id="donation" className="relative flex xs:flex-col flex-row xs:p-8 p-16">
                 <div className='flex flex-col gap-4 xs:text-center text-left w-full'>
-                    <div className="flex gap-2 items-center justify-center">
+                    <div className="flex gap-2 items-center xs:justify-center justify-start">
                         <div className="bg-[#F6CE0E] xs:w-7 w-0 h-[2px]" />
                         <p className="text-[#F6CE0E] uppercase text-[16px] font-bold">Donatioin</p>
                         <div className="bg-[#F6CE0E] w-7 h-[2px]" />
@@ -675,7 +682,7 @@ export default function Home() {
                         <br /><br />
                         Feel free to donate to the official ERC 20 donation wallet
                         <br /><br />
-                        <span className="break-words">0xe9Eb4559e8a39B635A42A221A135a79C340CBb8F</span>
+                        <span className="break-words cursor-pointer hover:text-[#F6CE0E]" onClick={() => handleClickCopy(config.donateAdr)}>{ config.donateAdr }</span>
                         <br /><br />
                         <span className="font-bold">Accepted</span>: Any ERC20 token
                         <br />
@@ -702,13 +709,13 @@ export default function Home() {
                     {
                         socials.map((item, index) => {
                             return (
-                                <div className="flex bg-white p-8 items-center gap-2 w-[370px] rounded-lg">
+                                <a href={item.link} target="_blank" className="flex bg-white p-8 items-center gap-2 w-[370px] rounded-lg cursor-pointer hover:-translate-y-2">
                                     <img src={item.icon} width="50px" height="50px" className="!w-12 !h-12" />
                                     <div className="text-left">
                                         <p className="text-[18px] font-bold">{item.title}</p>
                                         <p className="text-[14px] font-normal">{item.content}</p>
                                     </div>
-                                </div>
+                                </a>
                             )
                         })
                     }
