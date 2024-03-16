@@ -1,9 +1,9 @@
 const config = {
     isMainnet: false,
 
-    twitterlink: 'https://twitter.com/shivalabs',
-    telegramlink: 'https://t.me/shivalabs',
-    discordlink: 'https://discord.gg/shivalabs',
+    twitterlink: 'https://twitter.com/habibearz',
+    telegramlink: 'https://t.me/habibearz',
+    discordlink: 'https://discord.gg/habibearz',
 }
 
 export default config;

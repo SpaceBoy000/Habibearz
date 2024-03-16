@@ -97,17 +97,17 @@ const features = [
 
 const socials = [
     { 
-        title: 'Twitter',
+        title: 'Home',
         icon: xIcon,
         url: config.twitterlink
     },
     { 
-        title: 'Telegram', 
+        title: 'Stake', 
         icon: telegramIcon,
         url: config.telegramlink
     },
     { 
-        title: 'Discord', 
+        title: 'Data', 
         icon: discordIcon,
         url: config.discordlink
     },
@@ -152,85 +152,35 @@ export default function Navbar() {
 
     return (
         <div className="flex xs:w-full xs:min-h-screen xs:z-20">
-            <div className={`relative xs:absolute min-h-full xs:z-20 border-r border-[#ffffff1a] dark:border-black nav-bar bg-[linear-gradient(127deg,_rgba(6,_11,_40,_0.74)_28.26%,_rgba(10,_14,_35,_0.71)_91.2%)] dark:bg-gradient-to-t from-white to to-white`}>
+            <div className={`relative xs:absolute min-h-full xs:z-20 border-r border-[#ffffff1a] dark:border-black nav-bar bg-white dark:bg-[#303030]`}>
                 <div className="nav-bar-panel">
                     <div className="relative nav-bar-panel2">
-                        <div className="main-logo bg-[linear-gradient(98deg,_#FFF_70.67%,_rgba(117,_122,_140,_0.00)_108.55%)] dark:bg-[linear-gradient(91deg,_#000_54.04%,_rgba(255,_255,_255,_0.00)_91.87%)]">
-                            Shiva Labs
+                        <div className="main-logo bg-[#303030] dark:bg-white">
+                            Habibearz
                         </div>
-                        <RiMenuFoldLine className="absolute top-0 hidden w-6 h-6 text-white xs:flex dark:text-black -right-6" onClick={() => {showNavFunc(false)}}/>
-                        
+                        <RiMenuFoldLine className="absolute top-0 hidden w-6 h-6 xs:flex text-black dark:text-white -right-6" onClick={() => {showNavFunc(false)}}/>
                         <div className="control-panel">
-                            <span className="title-2 text-white dark:text-black !font-normal pb-2">Product</span>
-                            {
-                                features.map((item, index) => {
-                                    return (
-                                        <>
-                                            <div className="cursor-pointer control-item" key={index} onClick={() => { handleClickItem(index) }}>
-                                                <div className="item-field">
-                                                    <img src={item.icon} width="24px" height="24px" />
-                                                    <span className="pl-1 text-white title-2 dark:text-black">{item.title}</span>
-                                                </div>
-                                                {/* <img src={isOpen == index ? upIcon : downIcon} width="24px" height="24px" /> */}
-                                                {
-                                                    item.properties?.length > 0 ? 
-                                                    (isOpen == index ? <FaAngleUp className="w-4 h-4 text-white dark:text-black"/> : <FaAngleDown className="w-4 h-4 text-white dark:text-black"/>)
-                                                    : 
-                                                    <></>}
-                                            </div>
-                                            {
-                                                isOpen == index && item.properties?.length > 0 ?
-                                                    <div className="flex flex-col gap-1">
-                                                        {
-                                                            item?.properties?.length && item?.properties?.map((child, index2) => {
-                                                                return (
-                                                                    <Link to={child.url} className={`child-panel cursor-pointer hover:bg-[#4628ff4d] dark:hover:bg-[#4628ff] ${isOpenChild == index2 ? "bg-[#4628ff4d] dark:bg-[#4628FF]" : "bg-transparent"}`} key={index2} onClick={() => { handleClickChildItem(index2) }}>
-                                                                        <p className={`title-2 ${isOpenChild == index2 ? "text-white dark:text-white" : "text-white dark:text-black"} dark:hover:text-white !font-normal`}>{ child.title }</p>
-                                                                    </Link>
-                                                                );
-                                                            })
-                                                        }
-                                                    </div>
-                                                    :
-                                                    <></>
-                                            }
-                                        </>
-                                    )
-                                })
-                            }
-                        </div>
-                        <div className="control-panel">
-                            <span className="title-2 text-white dark:text-black !font-normal pb-2">Socials</span>
+                            {/* <span className="title-2 text-white dark:text-black !font-normal pb-2">Socials</span> */}
                             {
                                 socials.map((item, index) => {
                                     return (
                                         <a className="control-item" key={index} href={item.url} target="__blank">
                                             <div className="item-field">
-                                                <img src={item.icon} width="24px" height="24px" />
-                                                <span className="pl-1 text-white title-2 dark:text-black">{item.title}</span>
+                                                {/* <img src={item.icon} width="24px" height="24px" /> */}
+                                                <span className="pl-1 title-2 text-black dark:text-white">{item.title}</span>
                                             </div>
                                         </a>
                                     )
                                 })
                             }
                         </div>
-                        <div className="help-panel">
-                            <div className="flex justify-center w-8 h-8 bg-white border rounded-xl">
-                                <img src={helpIcon} width="24px" height="24px" />
-                            </div>
-                            <span className="text-white title-2">Need help?</span>
-                            <span className="text-white source-1">Please check our docs</span>
-                            <a href="/doc.pdf" className="btn-doc">
-                                <p className="text-white btn-text dark:text-black">DOCUMENTATION</p>
-                            </a>
-
-                        </div>
+{/*            
                         <div className="color-mode">
                             <div className="color-mode-panel bg-[#01276A] dark:bg-white cursor-pointer">
                                 <img src={ colorMode ? lightActiveIcon : lightIcon } width="24px" height="24px" className={`p-1 rounded-full ${colorMode ? "bg-black dark:bg-[#4628FF]" : ""}`} onClick={() => {switchColorTheme(true)}}/>
                                 <img src={ colorMode ? darkIcon : darkActiveIcon } width="24px" height="24px" className={`p-1 rounded-full ${!colorMode ? "bg-black" : ""}`} onClick={() => {switchColorTheme(false)}}/>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>

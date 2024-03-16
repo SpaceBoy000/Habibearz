@@ -11,11 +11,11 @@ export const GlobalProvider = ({ children }) => {
     const [darkMode, setDarkMode] = useState(false);
     const [showNav, setShowNav] = useState(true);
 
-    useEffect(() =>{
-        if (window.innerWidth <= 600) {
-            setShowNav(false);
-        }
-    }, [])
+    // useEffect(() =>{
+    //     if (window.innerWidth <= 600) {
+    //         setShowNav(false);
+    //     }
+    // }, [])
 
     useEffect(() => {
         console.log("GlobalProvider: ", darkMode);

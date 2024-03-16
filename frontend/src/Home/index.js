@@ -206,7 +206,7 @@ export default function Home() {
 
     return (
         <div className="">
-            <div id="banner" className="flex lg:flex-row flex-col p-4">
+            <div id="banner" className="flex lg:flex-row flex-col xs:p-4 px-16">
                 <div className='flex flex-col gap-4 text-center justify-center lg:text-left w-full lg:w-1/2'>
                     <div className="flex gap-2 items-center xs:self-center">
                         <div className="bg-[#F6CE0E] w-7 lg:w-0 h-[2px]" />
@@ -228,10 +228,10 @@ export default function Home() {
                     <img src={bannerImg} />
                 </div>
             </div>
-            <div id="social" className="flex flex-col lg:flex-row text-left p-4">
-                <div className="flex">
-                    <p className="text-[24px] font-bold text-black dark:text-white">Join our<br />community</p>
-                    <img src={characImg} width="132px" height="104px !important" />
+            <div id="social" className="flex xs:flex-col flex-row text-left xs:p-4 p-16">
+                <div className="xs:hidden flex relative items-center">
+                    <p className="text-[24px] font-bold text-black dark:text-white pr-[132px]">Join our<br />community</p>
+                    <img src={characImg} width="132px" className="absolute right-0 -bottom-4" />
                 </div>
                 <div className="flex flex-wrap flex-row gap-4 justify-center">
                     {
@@ -246,7 +246,7 @@ export default function Home() {
                     }
                 </div>
             </div>
-            <div id="body" className="pt-8 px-4">
+            <div id="body" className="pt-8 xs:px-4 p-16">
                 <div className="flex gap-2 items-center justify-center py-4">
                     <div className="bg-[#F6CE0E] xs:w-7 w-0 h-[2px]" />
                     <p className="text-[#F6CE0E] uppercase xs:text-[12px] text-[16px] font-bold">How HBEARZ DeFi 2.0 Works</p>
@@ -257,7 +257,7 @@ export default function Home() {
                     <p className="xs:text-[14px] text-[18px] font-normal text-black dark:text-white">In a evolution of DeFi and Metaverse platforms HBEARZ has the opportunity to participate in not only token rewards, but the rewards of the metaverses revenue</p>
                 </div>
                 <div className="flex xs:flex-col flex-row gap-8 pt-16">
-                    <div className="w-full flex xs:flex-col flex-row xs:items-center items-start gap-4">
+                    <div className="w-full flex xs:flex-col flex-row items-center gap-4">
                         <div className="bg-[#FED201] text-[36px] font-bold rounded-full !w-16 !h-16 px-6 flex items-center">1</div>
                         <div className="xs:text-center text-left flex flex-col gap-1">
                             <p className="text-[18px] font-bold text-[#969696] dark:text-[#FED201]">Enter the Habibiverz Ecosystem</p>
@@ -269,8 +269,8 @@ export default function Home() {
                         <img src={img1} />
                     </div>
                 </div>
-                <div className="flex xs:flex-col flex-row gap-8 pt-16">
-                    <div className="w-full flex  xs:flex-col flex-row xs:items-center items-start gap-4">
+                <div className="flex xs:flex-col flex-row-reverse gap-8 pt-16">
+                    <div className="w-full flex  xs:flex-col flex-row items-center gap-4">
                         <div className="bg-[#FED201] text-[36px] font-bold rounded-full !w-16 !h-16 px-6 flex items-center">2</div>
                         <div className="xs:text-center text-left flex flex-col gap-1">
                             <p className="text-[18px] font-bold text-[#969696] dark:text-[#FED201]">Recieve Tokens Rewards</p>
@@ -283,7 +283,7 @@ export default function Home() {
                     </div>
                 </div>
                 <div className="flex xs:flex-col flex-row gap-8 pt-16">
-                    <div className="w-full flex  xs:flex-col flex-row xs:items-center items-start gap-4">
+                    <div className="w-full flex  xs:flex-col flex-row items-center gap-4">
                         <div className="bg-[#FED201] text-[36px] font-bold rounded-full !w-16 !h-16 px-6 flex items-center">3</div>
                         <div className="xs:text-center text-left flex flex-col gap-1">
                             <p className="text-[18px] font-bold text-[#969696] dark:text-[#FED201]">Earn Revenue</p>
@@ -296,7 +296,7 @@ export default function Home() {
                     </div>
                 </div>
                 <div className="flex xs:flex-col flex-row-reverse gap-8 pt-16">
-                    <div className="w-full flex  xs:flex-col flex-row xs:items-center items-start gap-4">
+                    <div className="w-full flex  xs:flex-col flex-row items-center gap-4">
                         <div className="bg-[#FED201] text-[36px] font-bold rounded-full !w-16 !h-16 px-6 flex items-center">4</div>
                         <div className="xs:text-center text-left flex flex-col gap-1">
                             <p className="text-[18px] font-bold text-[#969696] dark:text-[#FED201]">Compound Interest</p>
@@ -309,7 +309,7 @@ export default function Home() {
                     </div>
                 </div>
                 <div className="flex xs:flex-col flex-row gap-8 pt-16">
-                    <div className="w-full flex  xs:flex-col flex-row xs:items-center items-start gap-4">
+                    <div className="w-full flex  xs:flex-col flex-row items-center gap-4">
                         <div className="bg-[#FED201] text-[36px] font-bold rounded-full !w-16 !h-16 px-6 flex items-center">5</div>
                         <div className="xs:text-center text-left flex flex-col gap-1">
                             <p className="text-[18px] font-bold text-[#969696] dark:text-[#FED201]">Treasury Growth</p>
@@ -322,7 +322,7 @@ export default function Home() {
                     </div>
                 </div>
                 <div className="flex xs:flex-col flex-row-reverse gap-8 pt-16">
-                    <div className="w-full flex  xs:flex-col flex-row xs:items-center items-start gap-4">
+                    <div className="w-full flex  xs:flex-col flex-row items-center gap-4">
                         <div className="bg-[#FED201] text-[36px] font-bold rounded-full !w-16 !h-16 px-6 flex items-center">6</div>
                         <div className="xs:text-center text-left flex flex-col gap-1">
                             <p className="text-[18px] font-bold text-[#969696] dark:text-[#FED201]">Farm for ETH</p>
@@ -335,7 +335,7 @@ export default function Home() {
                     </div>
                 </div>
                 <div className="flex xs:flex-col flex-row gap-8 pt-16">
-                    <div className="w-full flex  xs:flex-col flex-row xs:items-center items-start gap-4">
+                    <div className="w-full flex  xs:flex-col flex-row items-center gap-4">
                         <div className="bg-[#FED201] text-[36px] font-bold rounded-full !w-16 !h-16 px-6 flex items-center">7</div>
                         <div className="xs:text-center text-left flex flex-col gap-1">
                             <p className="text-[18px] font-bold text-[#969696] dark:text-[#FED201]">HODL and Profit from the Ecosystem</p>
@@ -348,8 +348,8 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-            <div id="platform" className="bg-[#1C2635] p-8">
-                <div className="flex xs:flex-col flex-row">
+            <div id="platform" className="bg-[#1C2635] xs:p-8 p-16">
+                <div className="flex xs:flex-col flex-row gap-8">
                     <div className="w-full">
                         <div className="flex gap-2 items-center py-4 xs:justify-center justify-left">
                             <div className="bg-[#F6CE0E] xs:w-7 w-0 h-[2px]" />
@@ -376,8 +376,10 @@ export default function Home() {
                             </div>
                         </div>
                     </div>
-                    <div className="w-full flex justify-center">
-                        <img src={toTheMoonImg} className="w-full h-auto" />
+                    <div className="w-full flex justify-center items-center">
+                        <div>
+                            <img src={toTheMoonImg} className="" />
+                        </div>
                     </div>
                 </div>
                 <div className="flex flex-col items-center pt-8">
@@ -396,7 +398,7 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-            <div id="welcome" className="p-8">
+            <div id="welcome" className="xs:p-8 p-16">
                 <div className="flex gap-2 items-center py-4 justify-center">
                     <div className="bg-[#F6CE0E] w-7 h-[2px]" />
                     <p className="text-[#F6CE0E] uppercase xs:text-[12px] text-[16px] font-bold">Welcome to Habibiverz</p>
@@ -425,10 +427,10 @@ export default function Home() {
                 </div>
 
                 <div className="py-8 flex justify-center">
-                    <p className="font-[Poppins] bg-[#11B0C8] w-fit py-2 xs:px-2 px-16 rounded-3xl text-white">Explore Crytoloria’s Metaverse</p>
+                    <p className="font-[Poppins] bg-[#11B0C8] w-fit py-2 xs:px-4 px-16 rounded-3xl text-white">Explore Crytoloria’s Metaverse</p>
                 </div>
 
-                <div className="relative flex xs:flex-col flex-row py-16">
+                <div className="relative flex xs:flex-col gap-8 flex-row pt-16">
                     <div className="w-full flex justify-center">
                         <img src={phoneImg} />
                     </div>
@@ -446,21 +448,23 @@ export default function Home() {
                             <br /><br />
                             Beat the Vortex and win crypto! On both iOS and Android platforms
                         </p>
-                        <div className="flex items-center flex-wrap gap-8 pt-16">
+                        <div className="flex items-center xs:justify-center justify-start flex-wrap gap-8 xs:pt-4 pt-16">
                             <p className="text-[18px] font-bold text-black dark:text-white">Available on:</p>
-                            <img src={googlePlayImg} />
-                            <img src={appStoreImg} />
+                            <div className="flex gap-4 justify-center">
+                                <img src={googlePlayImg} />
+                                <img src={appStoreImg} />
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div id="partnership" className="p-8">
+            <div id="partnership" className="xs:p-8 p-16 pt-0">
                 <div className="flex gap-2 items-center py-4 justify-center">
                     <div className="bg-[#F6CE0E] w-7 h-[2px]" />
                     <p className="text-[#F6CE0E] uppercase text-[16px] font-bold">Charity Donations</p>
                     <div className="bg-[#F6CE0E] w-7 h-[2px]" />
                 </div>
-                <div className="flex flex-col items-center text-center justify-center">
+                <div className="flex flex-col items-center text-center justify-center gap-4">
                     <p className="xs:text-[24px] text-[36px] font-bold text-black dark:text-white">A Partnership with the Million Gardens Movement, for every $10 of Coins bought, a percentage helps to plant a tree</p>
                     <p className="xs:text-[14px] text-[18px] font-normal text-black dark:text-white max-w-[1052px]">We want to help rejuvenate the earth’s trees before we jet off into the Metaverse and explore the worlds of Habibiverz. Help us contribute to making this world a safer place, before we save other planets!</p>
                 </div>
@@ -473,7 +477,7 @@ export default function Home() {
                     <img src={partnership4Img} />
                 </div>
             </div>
-            <div id="tokenomics" className="bg-[#1C2635] p-8">
+            <div id="tokenomics" className="bg-[#1C2635] xs:p-8 p-16">
                 <div className="flex gap-2 items-center py-4 justify-center">
                     <div className="bg-[#F6CE0E] w-7 h-[2px]" />
                     <p className="text-[#F6CE0E] uppercase text-[16px] font-bold">Tokenomics</p>
@@ -503,7 +507,7 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-            <div className="p-8">
+            <div className="xs:p-8 p-16">
                 <div id="how-to-buy">
                     <div className="flex gap-2 items-center py-4 justify-center">
                         <div className="bg-[#F6CE0E] w-7 h-[2px]" />
@@ -515,7 +519,7 @@ export default function Home() {
                         <p className="xs:text-[14px] text-[18px] font-normal text-black dark:text-white max-w-[1052px]">the next evolution in DeFi platforms. ShibaSwap gives users the ability to provide liquidity, stake, and swap tokens to gain returns through our sophisticated and innovative passive income reward system</p>
                     </div>
                     <div className="py-8">
-                        <div className="flex justify-between">
+                        <div className="flex justify-between xs:gap-4 gap-8">
                             <p className={`"text-center cursor-pointer text-[18px] font-bold w-full ${activeTab == 1 ? "border-b-2 border-[#F6CE0E] text-[#F6CE0E]" : "text-[#A4A0B8]"}`} onClick={() => { handleChangeTab(1) }}>Step 1</p>
                             <p className={`"text-center cursor-pointer text-[18px] font-bold w-full ${activeTab == 2 ? "border-b-2 border-[#F6CE0E] text-[#F6CE0E]" : "text-[#A4A0B8]"}`} onClick={() => { handleChangeTab(2) }}>Step 2</p>
                             <p className={`"text-center cursor-pointer text-[18px] font-bold w-full ${activeTab == 3 ? "border-b-2 border-[#F6CE0E] text-[#F6CE0E]" : "text-[#A4A0B8]"}`} onClick={() => { handleChangeTab(3) }}>Step 3</p>
@@ -523,7 +527,7 @@ export default function Home() {
                         </div>
                         {
                             activeTab == 1 &&
-                            <div className="flex p-8 items-start gap-2 rounded-lg">
+                            <div className="flex py-8 items-start gap-2 rounded-lg">
                                 <img src={noMarkIcon} width="50px" height="50px" className="!w-12 !h-12" />
 
                                 <div className="text-left">
@@ -562,7 +566,7 @@ export default function Home() {
                         <p className="xs:text-[24px] text-[36px] font-bold text-black dark:text-white max-w-[1052px] leading-10">Our DeFi Platform and Tokenomics strategy provide the foundation for a Strong and Lively Ecosystem</p>
                         <p className="xs:text-[14px] text-[18px] font-normal text-black dark:text-white max-w-[1052px]">We have developed Tokenomics as a launchpad to the Habibiverz Ecosystem, providing safety through burning, growth through DeFi and Ownership with access to the upcoming products in the Habibiverz Metaverse.</p>
                     </div>
-                    <div className="flex xs:flex-col flex-row-reverse pt-8">
+                    <div className="flex xs:flex-col flex-row pt-8">
                         <div className="xs:w-full w-3/5">
                             <div className="flex xs:flex-col flex-row gap-8 justify-end">
                                 <p className="text-[22px] font-bold bg-[#FFFBE7] rounded-lg py-4 px-8">ETH Total Supply<br /> 1,000,000,000,000</p>
@@ -616,7 +620,7 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-            <div id="roadmap" className="bg-[#1C2635] p-8">
+            <div id="roadmap" className="bg-[#1C2635] xs:p-8 p-16">
                 <div className="flex gap-2 items-center py-4 justify-center">
                     <p className="text-white text-[36px] font-bold">Roadmap</p>
                 </div>
@@ -649,7 +653,7 @@ export default function Home() {
                 </div>
                 <p className="text-[18px] text-white dark:text-black font-bold pt-16">More to be announced 🐶</p>
             </div>
-            <div id="donation" className="relative flex xs:flex-col flex-row py-16 px-8">
+            <div id="donation" className="relative flex xs:flex-col flex-row xs:p-8 p-16">
                 <div className='flex flex-col gap-4 xs:text-center text-left w-full'>
                     <div className="flex gap-2 items-center justify-center">
                         <div className="bg-[#F6CE0E] xs:w-7 w-0 h-[2px]" />
@@ -674,7 +678,7 @@ export default function Home() {
                 </div>
                 <img src={characImg} width="243px" className="xs:relative absolute bottom-4 left-[calc(50%-120px)]" />
             </div>
-            <div id="community" className="bg-[#1C2635] p-8">
+            <div id="community" className="bg-[#1C2635] xs:p-8 p-16">
                 <div className="flex gap-2 items-center py-4 justify-center">
                     <div className="bg-[#F6CE0E] w-7 h-[2px]" />
                     <p className="text-[#F6CE0E] uppercase xs:text-[12px] text-[16px] font-bold">Community</p>

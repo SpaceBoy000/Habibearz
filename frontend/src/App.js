@@ -15,7 +15,7 @@ function App() {
     return (
         <BrowserRouter>
             <div className="flex App">
-                {/* <Navbar/> */}
+                { showNav && <Navbar/>}
                 <div className={`w-full dark:bg-[#171717] bg-[#FCFCFC] ${showNav ? 'xs:fixed' : ''}`}>
                     <Header />
                     <div>
