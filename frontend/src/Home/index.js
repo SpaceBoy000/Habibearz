@@ -1,4 +1,7 @@
 import { useState } from "react";
+import { toast } from "react-toastify";
+import config from "../config";
+import FAQs from "../components/faq/FAQs";
 
 import bannerImg from "../assets/images/banner.png";
 
@@ -8,6 +11,7 @@ import discordIcon from "../assets/icons/socials/discord.png";
 import insIcon from "../assets/icons/socials/instagram.png";
 
 import characImg from "../assets/images/character.png";
+import presentBearImg from "../assets/images/bear_with_present.png";
 import img1 from "../assets/images/image1.png";
 import img2 from "../assets/images/image2.png";
 import img3 from "../assets/images/image3.png";
@@ -53,8 +57,7 @@ import chartImg from "../assets/images/chart.png";
 
 import noMarkIcon from "../assets/icons/no-mark.png";
 
-import config from "../config";
-import { toast } from "react-toastify";
+
 
 const socials = [
     { title: "Telegram", icon: telIcon, content: "Chat in real time with the Eden community", link: config.telegramlink },
@@ -251,6 +254,21 @@ const mainContents = [
     },
 ]
 
+const faqData = [
+    {
+        title: <p>HODL, Stake and Rewards</p>,
+        description: <p>HBEARZ is designed for community ownership and its the only meme coin that allows user ownership via staking to hodl to partake in ever increasing rewards schemes. The longer you hold the more rewards you earn.</p>
+    },
+    {
+        title: <p>Sustainable price Stabilisation</p>,
+        description: <p>HBEARZ is designed for community ownership and its the only meme coin that allows user ownership via staking to hodl to partake in ever increasing rewards schemes. The longer you hold the more rewards you earn.</p>
+    },
+    {
+        title: <p>NFT and Metaverse Gaming Ecosystem</p>,
+        description: <p>HBEARZ is designed for community ownership and its the only meme coin that allows user ownership via staking to hodl to partake in ever increasing rewards schemes. The longer you hold the more rewards you earn.</p>
+    }
+]
+
 export default function Home() {
 
     const [activeTab, setActiveTab] = useState(1);
@@ -321,7 +339,7 @@ export default function Home() {
                     mainContents.map((item, index) => {
                         return (
                             <div className={`flex xs:flex-col ${index % 2 == 0 ? "flex-row" : "flex-row-reverse"} gap-8 pt-16`}>
-                                <div className="flex items-center">
+                                <div className="w-full flex items-center">
                                     <div className="w-full flex xs:flex-col flex-row xs:items-center items-start gap-4">
                                         <div>
                                             <div className="bg-[#FED201] w-[48px] h-[48px] rounded-full flex items-center justify-center text-[36px] font-bold">{index + 1}</div>
@@ -419,7 +437,7 @@ export default function Home() {
                     </div>
                 </div>
 
-                <div className="py-8 flex justify-center">
+                <div className="py-8 flex justify-center cursor-pointer hover:-translate-y-2">
                     <p className="font-[Poppins] bg-[#11B0C8] w-fit py-2 xs:px-4 px-16 rounded-3xl text-white">Explore Crytoloria’s Metaverse</p>
                 </div>
 
@@ -461,7 +479,7 @@ export default function Home() {
                     <p className="xs:text-[24px] text-[36px] font-bold text-black dark:text-white">A Partnership with the Million Gardens Movement, for every $10 of Coins bought, a percentage helps to plant a tree</p>
                     <p className="xs:text-[14px] text-[18px] font-normal text-black dark:text-white max-w-[1052px]">We want to help rejuvenate the earth’s trees before we jet off into the Metaverse and explore the worlds of Habibiverz. Help us contribute to making this world a safer place, before we save other planets!</p>
                 </div>
-                <div className="flex xs:flex-col flex-row  xs:items-center justify-between w-full gap-8 py-8">
+                <div className="flex xs:flex-col flex-row  xs:items-center justify-center w-full gap-8 lg:gap-16 py-8">
                     <img src={partnership1Img} width="320px" />
                     <img src={partnership2Img} width="320px" />
                     <img src={partnership3Img} width="320px" />
@@ -481,19 +499,8 @@ export default function Home() {
                     <p className="xs:text-[14px] text-[18px] font-normal text-white max-w-[1052px]">Our Comprehensive Meme Coin, DeFi Platform and Metaverse products have provided a sustainable tokenomic plan for short term growth and long term sustainability. Read 3 main ways we do this</p>
                 </div>
                 <div className="flex xs:flex-col flex-row xs:gap-4 gap-16 pt-8">
-                    <div className="flex flex-col gap-4">
-                        <div className="flex flex-col text-left bg-white p-8 gap-2 rounded-lg w-full">
-                            <p className="text-[18px] font-bold">HODL, Stake and Rewards</p>
-                            <p className="text-[14px] font-normal">HBEARZ is designed for community ownership and its the only meme coin that allows user ownership via staking to hodl to partake in ever increasing rewards schemes. The longer you hold the more rewards you earn.</p>
-                        </div>
-                        <div className="flex flex-col text-left bg-white p-8 gap-2 rounded-lg w-full">
-                            <p className="text-[18px] font-bold">Sustainable price Stabilisation</p>
-                            <p className="text-[14px] font-normal">HBEARZ is designed for community ownership and its the only meme coin that allows user ownership via staking to hodl to partake in ever increasing rewards schemes. The longer you hold the more rewards you earn.</p>
-                        </div>
-                        <div className="flex flex-col text-left bg-white p-8 gap-2 rounded-lg w-full">
-                            <p className="text-[18px] font-bold">NFT and Metaverse Gaming Ecosystem</p>
-                            <p className="text-[14px] font-normal">HBEARZ is designed for community ownership and its the only meme coin that allows user ownership via staking to hodl to partake in ever increasing rewards schemes. The longer you hold the more rewards you earn.</p>
-                        </div>
+                    <div className="w-full flex flex-col gap-4">
+                        <FAQs data={ faqData }/>
                     </div>
                     <div className="w-full flex items-center">
                         <img src={tokenomicsImg} />
@@ -518,35 +525,37 @@ export default function Home() {
                             <p className={`"text-center cursor-pointer text-[18px] font-bold w-full ${activeTab == 3 ? "border-b-2 border-[#F6CE0E] text-[#F6CE0E]" : "text-[#A4A0B8]"}`} onClick={() => { handleChangeTab(3) }}>Step 3</p>
                             <p className={`"text-center cursor-pointer text-[18px] font-bold w-full ${activeTab == 4 ? "border-b-2 border-[#F6CE0E] text-[#F6CE0E]" : "text-[#A4A0B8]"}`} onClick={() => { handleChangeTab(4) }}>Step 4</p>
                         </div>
-                        {
-                            activeTab == 1 &&
-                            <div className="flex py-8 items-start gap-2 rounded-lg">
-                                <img src={noMarkIcon} width="50px" height="50px" className="!w-12 !h-12" />
+                        <div className="lg:px-16">
+                            {
+                                activeTab == 1 &&
+                                <div className="flex py-8 items-start gap-2 rounded-lg">
+                                    <img src={noMarkIcon} width="50px" height="50px" className="!w-12 !h-12" />
 
-                                <div className="text-left">
-                                    <p className="text-[18px] font-bold text-black dark:text-white">Create a MetaMask Wallet</p>
-                                    <p className="text-[14px] font-normal text-black dark:text-white">EdenSwap token is available on the Ethereum blockchain. MetaMask is a third party ERC20 (Ethereum) browser wallet, and the very best at that! On Google Chrome, visit metamask.io to download the extension and set up a wallet. On mobile? Get MetaMask's app for iPhone or Android.</p>
+                                    <div className="text-left">
+                                        <p className="text-[18px] font-bold text-black dark:text-white">Create a MetaMask Wallet</p>
+                                        <p className="text-[14px] font-normal text-black dark:text-white">EdenSwap token is available on the Ethereum blockchain. MetaMask is a third party ERC20 (Ethereum) browser wallet, and the very best at that! On Google Chrome, visit metamask.io to download the extension and set up a wallet. On mobile? Get MetaMask's app for iPhone or Android.</p>
+                                    </div>
                                 </div>
-                            </div>
-                        }
-                        {
-                            activeTab == 2 &&
-                            <div className="flex p-8 items-start gap-2 rounded-lg h-16">
+                            }
+                            {
+                                activeTab == 2 &&
+                                <div className="flex p-8 items-start gap-2 rounded-lg h-16">
 
-                            </div>
-                        }
-                        {
-                            activeTab == 3 &&
-                            <div className="flex p-8 items-start gap-2 rounded-lg h-16">
+                                </div>
+                            }
+                            {
+                                activeTab == 3 &&
+                                <div className="flex p-8 items-start gap-2 rounded-lg h-16">
 
-                            </div>
-                        }
-                        {
-                            activeTab == 4 &&
-                            <div className="flex p-8 items-start gap-2 rounded-lg h-16">
+                                </div>
+                            }
+                            {
+                                activeTab == 4 &&
+                                <div className="flex p-8 items-start gap-2 rounded-lg h-16">
 
-                            </div>
-                        }
+                                </div>
+                            }
+                        </div>
                     </div>
                 </div>
                 <div id="token-allocation">
@@ -583,8 +592,8 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
-                <div id="social-media" className="flex xs:flex-col flex-row gap-8 xs:p-0 p-8">
-                    <div className="w-full text-left">
+                <div id="social-media" className="flex xs:flex-col flex-row justify-between gap-8 xs:p-0 p-8">
+                    <div className="w-full max-w-[440px] text-left">
                         <div className="flex gap-2 items-center">
                             <p className="text-[#F6CE0E] uppercase xs:text-[12px] text-[16px] font-bold">SOCIAL MEDIA REACH</p>
                             <div className="bg-[#F6CE0E] w-7 h-[2px]" />
@@ -596,12 +605,12 @@ export default function Home() {
                             Whether you want to follow HBEARZ's adventure throughout Habibiverz, want to help shape the story or just make money from our Ecosystem - it's up to you!
                         </p>
                     </div>
-                    <div className="w-full bg-[#55ACEE] flex flex-col justify-between gap-8 rounded-lg xs:p-8 p-16">
+                    <div className="w-full max-w-[380px] bg-[#55ACEE] flex flex-col justify-between gap-8 rounded-lg xs:p-8 p-16">
                         <img src={xImg} className="w-[60px]" />
                         <p className="xs:text-[44px] text-[48px] text-left font-bold text-white dark:text-black">50,000+</p>
                         <p className="text-[24px] text-left font-bold text-white dark:text-black">Follow us on Twitter #HBEARZOnlyFans</p>
                     </div>
-                    <div className="w-full flex flex-col gap-8">
+                    <div className="w-full max-w-[380px] flex flex-col gap-8">
                         <div className="bg-[#F6CE0E] p-8 rounded-lg">
                             <p className="xs:text-[44px] text-[48px] text-left font-bold text-white dark:text-black">100,000+</p>
                             <p className="text-[24px] text-left font-bold text-white dark:text-black">Proud HBEARZ Holders</p>
@@ -654,7 +663,7 @@ export default function Home() {
                         <div className="bg-[#F6CE0E] w-7 h-[2px]" />
                     </div>
                     <p className="xs:text-[24px] text-[36px] font-bold text-black dark:text-white leading-[64px]">Feel like donating?</p>
-                    <p className="xs:text-[14px] text-[18px] font-normal text-black dark:text-white">
+                    <p className="xs:text-[14px] text-[18px] font-normal text-black dark:text-white max-w-[600px]">
                         As a community token HBEARZ depends on its generous members to support its heroic adventures of bringing hope and help to the hopeless and helpless.
                         <br /><br />
                         Feel free to donate to the official ERC 20 donation wallet
@@ -669,7 +678,7 @@ export default function Home() {
                 <div className="w-full flex justify-center">
                     <img src={qrcodeImg} />
                 </div>
-                <img src={characImg} width="243px" className="xs:relative absolute bottom-4 left-[calc(50%-120px)]" />
+                <img src={presentBearImg} width="243px" className="xs:relative absolute bottom-4 left-[calc(50%-120px)]" />
             </div>
             <div id="community" className="bg-[#1C2635] xs:p-8 p-16">
                 <div className="flex gap-2 items-center py-4 justify-center">
@@ -679,14 +688,14 @@ export default function Home() {
                 </div>
                 <div className="flex flex-col items-center text-center justify-center">
                     <p className="xs:text-[24px] text-[36px] font-bold text-white ">Join Our Community</p>
-                    <p className="xs:text-[14px] text-[20px] font-bold text-white  pb-4">100,000+ Twitter Followers ● 100,000+ Telegram Members</p>
+                    <p className="xs:text-[14px] text-[20px] font-bold text-white  pb-4">100,000+ Twitter Followers &nbsp;&nbsp;&nbsp;&nbsp; 100,000+ Telegram Members</p>
                     <p className="xs:text-[12px] text-[18px] font-normal text-white  max-w-[1052px]">Extremely active community that loves our mission. Our telegram channel is filled with community members 24/7 that would love to help you. Do not trust random messages of people claiming to be “support” or ever give out your wallet info to anyone.</p>
                 </div>
                 <div className="flex flex-row flex-wrap justify-center gap-8 pt-8">
                     {
                         socials.map((item, index) => {
                             return (
-                                <a href={item.link} target="_blank" className="flex bg-white p-8 items-center gap-2 w-[370px] rounded-lg cursor-pointer hover:-translate-y-2">
+                                <a href={item.link} target="_blank" className="flex bg-white p-8 items-center gap-4 w-[370px] rounded-lg cursor-pointer hover:-translate-y-2">
                                     <img src={item.icon} width="50px" height="50px" className="!w-12 !h-12" />
                                     <div className="text-left">
                                         <p className="text-[18px] font-bold">{item.title}</p>
